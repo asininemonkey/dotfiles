@@ -1,0 +1,37 @@
+# Mandatory
+about-scheme
+chrome-extension-scheme
+chrome-scheme
+edge-scheme
+moz-extension-scheme
+opera-scheme
+vivaldi-scheme
+wyciwyg-scheme
+
+# Local
+127.0.0.1
+192.168.1.1
+192.168.1.220
+
+# Work
+accounts.google.com
+amazonaws.com
+aws.training
+awscloud.com
+awsevents.com
+cloud.google.com
+datadoghq.com
+github.com
+hackerrank.com
+harness.io
+kubernetes.io
+linkedin.com
+mongodb.com
+netlify.com
+ngrok.com
+okta.com
+pagerduty.com
+slack.com
+terraform.io
+vmware.com
+zoom.us

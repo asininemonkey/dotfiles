@@ -1,0 +1,49 @@
+{
+    "extensions": {
+        "recommendations": [
+            "eamodio.gitlens",
+            "esbenp.prettier-vscode",
+            "hashicorp.terraform",
+            "mhutchie.git-graph",
+            "ms-azuretools.vscode-docker",
+            "ms-kubernetes-tools.vscode-kubernetes-tools",
+            "ms-vscode-remote.remote-containers",
+            "redhat.vscode-yaml"
+        ]
+    },
+    "folders": [
+        {
+            "path": "./bootstrap"
+        },
+        {
+            "path": "./dotfiles"
+        },
+        {
+            "path": "./josecardoso.com"
+        },
+        {
+            "path": "./cv.josecardoso.com"
+        }
+    ],
+    "settings": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontFamily": "FiraCode Nerd Font Mono",
+        "editor.fontLigatures": true,
+        "editor.fontSize": 16,
+        "editor.fontWeight": "normal",
+        "editor.renderControlCharacters": true,
+        "editor.renderWhitespace": "all",
+        "explorer.confirmDelete": false,
+        "files.associations": {
+            "*.hcl": "terraform"
+        },
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "scm.defaultViewMode": "tree",
+        "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+        "terminal.integrated.fontSize": 16,
+        "terminal.integrated.fontWeight": "normal",
+        "window.zoomLevel": 0.5
+    }
+}

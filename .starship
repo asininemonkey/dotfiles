@@ -1,0 +1,33 @@
+# https://starship.rs/config/#prompt
+format = """\
+    $username\
+    $directory\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_status\
+    $kubernetes\
+    $cmd_duration\
+    $line_break\
+    $time\
+    $character\
+"""
+
+# https://starship.rs/config/#character
+[character]
+error_symbol = "[→](bold red)"
+success_symbol = "[→](bold green)"
+
+# https://starship.rs/config/#kubernetes
+[kubernetes]
+disabled = false
+style = "bold green"
+
+# https://starship.rs/config/#time
+[time]
+disabled = false
+use_12hr = true
+
+# https://starship.rs/config/#username
+[username]
+show_always = true
