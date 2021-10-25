@@ -1,3 +1,5 @@
+[pull]
+	rebase = false
 [user]
 	email = 65740649+asininemonkey@users.noreply.github.com
 	name = Jose Cardoso
