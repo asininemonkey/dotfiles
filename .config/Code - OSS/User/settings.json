@@ -1,0 +1,10 @@
+{
+    "editor.fontFamily": "Iosevka",
+    "editor.fontSize": 16,
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "telemetry.telemetryLevel": "off",
+    "window.zoomLevel": 1,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.startupEditor": "none"
+}
