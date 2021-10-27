@@ -1,2 +1,4 @@
+alias gtop='sudo intel_gpu_top'
 alias htop='btop'
 alias top='btop'
+alias tree='tree -aghpuD'
