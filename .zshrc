@@ -13,6 +13,6 @@ source "${ZSH}/oh-my-zsh.sh"
 source "${HOME}/.zsh_aliases"
 source "${HOME}/.zsh_functions"
 
-macchina --bar --color blue --custom-ascii /etc/arch-ascii --palette full --theme beryllium
+macchina --custom-ascii /etc/arch-ascii --palette full --theme beryllium
 
 eval "$(starship init zsh)"
