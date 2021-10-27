@@ -1,6 +1,6 @@
 alias gtop='sudo intel_gpu_top'
 alias htop='btop'
-alias ls='ls -al'
+alias ls='ls --all --color always -l'
 alias ping='prettyping'
 alias top='btop'
 alias tree='tree -aghpuD'
