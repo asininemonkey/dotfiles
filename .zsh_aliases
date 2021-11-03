@@ -1,3 +1,4 @@
+alias dig='drill'
 alias gtop='sudo intel_gpu_top'
 alias htop='btop'
 alias ls='ls --all --color=always -l'
