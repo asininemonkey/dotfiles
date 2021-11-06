@@ -105,17 +105,17 @@ mas install 409203825			# Numbers
 # mas install 497799835			# Xcode
 
 # General Applications
-mas install 403504866			# PCalc
-mas install 405399194			# Kindle
+mas install 403504866			# PCalc *
+mas install 405399194			# Kindle *
 mas install 406056744			# Evernote
-mas install 406825478			# Telephone
-mas install 411643860			# DaisyDisk
-mas install 413857545			# Divvy
+mas install 406825478			# Telephone *
+mas install 411643860			# DaisyDisk *
+mas install 413857545			# Divvy *
 mas install 417375580			# BetterSnapTool
 mas install 425424353			# The Unarchiver
 mas install 430798174			# HazeOver
 mas install 457622435			# Yoink
-mas install 488764545			# The Clock
+mas install 488764545			# The Clock *
 mas install 803453959			# Slack
 mas install 824171161			# Affinity Designer
 mas install 824183456			# Affinity Photo
