@@ -8,11 +8,11 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "explorer.confirmDelete": false,
-    "git.autofetch": true,
-    "git.confirmSync": false,
     "files.associations": {
         "*.hcl": "terraform"
     },
+    "git.autofetch": true,
+    "git.confirmSync": false,
     "redhat.telemetry.enabled": false,
     "scm.defaultViewMode": "tree",
     "terminal.integrated.fontFamily": "FiraCode Nerd Font",
