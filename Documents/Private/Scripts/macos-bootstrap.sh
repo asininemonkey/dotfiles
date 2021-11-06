@@ -18,12 +18,12 @@ export OUTPUT_COLOUR_BOLD_WHITE=$(echo -en '\e[1;37m')
 # Change macOS Screenshot Settings
 #
 
-if [ ! -d "${HOME}/Pictures/Screenshots/macOS" ]
+if [ ! -d "${HOME}/Pictures/Screenshots" ]
 then
-    mkdir -p "${HOME}/Pictures/Screenshots/macOS"
+    mkdir -p "${HOME}/Pictures/Screenshots"
 
     defaults write com.apple.screencapture disable-shadow -bool true
-    defaults write com.apple.screencapture location "${HOME}/Pictures/Screenshots/macOS"
+    defaults write com.apple.screencapture location "${HOME}/Pictures/Screenshots"
 fi
 
 #
@@ -51,7 +51,6 @@ fi
 brew tap homebrew/cask-fonts
 
 brew install --cask \
-    font-fantasque-sans-mono-nerd-font \
     font-fira-code-nerd-font
 
 brew install \
@@ -64,29 +63,25 @@ brew install \
     docker-credential-helper-ecr \
     envchain \
     fzf \
-    get_iplayer \
     git \
     gnu-sed \
     googler \
     helm \
-    helmsman \
     hey \
     htop \
-    imagemagick \
     jq \
     k9s \
-    kops \
     kubernetes-cli \
+    macchina \
+    mas \
     ngrok \
     nmap \
     p7zip \
     prettyping \
-    sops \
     speedtest-cli \
     starship \
     stern \
     terraform \
-    terragrunt \
     tmux \
     tree \
     watch \
