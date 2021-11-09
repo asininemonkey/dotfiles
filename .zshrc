@@ -19,4 +19,4 @@ source "${HOME}/.zsh_functions"
 
 eval "$(starship init zsh)"
 
-macchina
+macchina --theme custom
