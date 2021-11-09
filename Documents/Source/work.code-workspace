@@ -1,0 +1,56 @@
+{
+    "extensions": {
+        "recommendations": [
+            "bungcip.better-toml",
+            "coenraads.bracket-pair-colorizer-2",
+            "eamodio.gitlens",
+            "esbenp.prettier-vscode",
+            "hashicorp.terraform",
+            "mhutchie.git-graph",
+            "ms-azuretools.vscode-docker",
+            "ms-kubernetes-tools.vscode-kubernetes-tools",
+            "ms-vscode-remote.remote-containers",
+            "rangav.vscode-thunder-client",
+            "redhat.vscode-yaml"
+        ]
+    },
+    "folders": [
+        {
+            "path": "./joey-card"
+        },
+        {
+            "path": "./joey-card-mobile"
+        },
+        {
+            "path": "./joey-webhooks"
+        },
+        {
+            "path": "./terraform-shared-infrastructure"
+        },
+        {
+            "path": "./user-management"
+        }
+    ],
+    "settings": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontFamily": "FiraCode Nerd Font",
+        "editor.fontLigatures": true,
+        "editor.fontSize": 18,
+        "editor.fontWeight": "normal",
+        "editor.renderControlCharacters": true,
+        "editor.renderWhitespace": "all",
+        "explorer.confirmDelete": false,
+        "files.associations": {
+            "*.hcl": "terraform"
+        },
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "redhat.telemetry.enabled": false,
+        "scm.defaultViewMode": "tree",
+        "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+        "terminal.integrated.fontSize": 18,
+        "terminal.integrated.fontWeight": "normal",
+        "window.zoomLevel": 0.5
+    }
+}
