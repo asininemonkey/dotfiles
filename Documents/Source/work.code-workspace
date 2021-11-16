@@ -25,6 +25,9 @@
             "path": "./joey-webhooks"
         },
         {
+            "path": "./terraform-local"
+        },
+        {
             "path": "./terraform-shared-infrastructure"
         },
         {
