@@ -1,0 +1,42 @@
+# https://github.com/Macchina-CLI/macchina/wiki/Theme-Documentation
+
+padding = 0
+palette = "Full"
+separator = "->"
+
+[bar]
+glyph = '●'
+symbol_close = ')'
+symbol_open = '('
+visible = true
+
+[box]
+title = ""
+visible = true
+
+[box.inner_margin]
+x = 1
+y = 0
+
+[custom_ascii]
+path = "/etc/arch-ascii"
+
+[keys]
+host = "Host"
+kernel = "Kernel"
+os = "OS"
+machine = "Machine"
+de = "DE"
+wm = "WM"
+distro = "Distro"
+packages = "Packages"
+terminal = "Terminal"
+shell = "Shell"
+local_ip = "Local IP"
+uptime = "Uptime"
+memory = "Memory"
+battery = "Battery"
+backlight = "Backlight"
+resolution = "Resolution"
+cpu_load = "CPU Load"
+cpu = "CPU"
