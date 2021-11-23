@@ -6,7 +6,7 @@ alias pgrep="pgrep -l"
 alias ping="prettyping"
 alias speedtest="speedtest --secure --share"
 alias top="htop"
-alias tree="tree -aghpu"
+alias tree="tree -aghpuCD"
 
 alias ta="terragrunt apply"
 alias taa="terragrunt apply -auto-approve"
