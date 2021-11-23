@@ -16,6 +16,9 @@
     },
     "folders": [
         {
+            "path": "./jcardoso-test"
+        },
+        {
             "path": "./joey-card"
         },
         {
