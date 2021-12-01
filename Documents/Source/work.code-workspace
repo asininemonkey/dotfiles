@@ -16,25 +16,25 @@
     },
     "folders": [
         {
-            "path": "jcardoso-test"
+            "path": "/Volumes/Source/Work/jcardoso-test"
         },
         {
-            "path": "joey-card"
+            "path": "/Volumes/Source/Work/joey-card"
         },
         {
-            "path": "joey-card-mobile"
+            "path": "/Volumes/Source/Work/joey-card-mobile"
         },
         {
-            "path": "joey-webhooks"
+            "path": "/Volumes/Source/Work/joey-webhooks"
         },
         {
-            "path": "terraform-local"
+            "path": "/Volumes/Source/Work/terraform-local"
         },
         {
-            "path": "terraform-shared-infrastructure"
+            "path": "/Volumes/Source/Work/terraform-shared-infrastructure"
         },
         {
-            "path": "user-management"
+            "path": "/Volumes/Source/Work/user-management"
         }
     ],
     "settings": {
