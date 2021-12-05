@@ -5,6 +5,8 @@
     "editor.renderWhitespace": "all",
     "redhat.telemetry.enabled": false,
     "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontFamily": "Iosevka",
+    "terminal.integrated.fontSize": 16,
     "window.zoomLevel": 1,
     "workbench.editor.untitled.hint": "hidden",
     "workbench.startupEditor": "none"
