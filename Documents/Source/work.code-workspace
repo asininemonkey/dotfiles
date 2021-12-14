@@ -2,7 +2,6 @@
     "extensions": {
         "recommendations": [
             "bungcip.better-toml",
-            "coenraads.bracket-pair-colorizer-2",
             "eamodio.gitlens",
             "esbenp.prettier-vscode",
             "hashicorp.terraform",
@@ -39,6 +38,8 @@
     ],
     "settings": {
         "diffEditor.ignoreTrimWhitespace": false,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active",
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.fontFamily": "FiraCode Nerd Font",
         "editor.fontLigatures": true,
