@@ -5,7 +5,7 @@ export AWS_PAGER=""
 # envchain --set github 'GITHUB_OAUTH_TOKEN'
 export GITHUB_OAUTH_TOKEN="$(envchain github env | grep 'GITHUB_OAUTH_TOKEN' | cut -d '=' -f 2)"
 
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${PATH}"
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin:${PATH}"
 export STARSHIP_CONFIG="${HOME}/.starship"
 export ZSH="${HOME}/.oh-my-zsh"
 
