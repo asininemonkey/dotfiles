@@ -1,3 +1,5 @@
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin:${PATH}"
+
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html
 export AWS_PAGER=""
 
@@ -5,7 +7,6 @@ export AWS_PAGER=""
 # envchain --set github 'GITHUB_OAUTH_TOKEN'
 export GITHUB_OAUTH_TOKEN="$(envchain github env | grep 'GITHUB_OAUTH_TOKEN' | cut -d '=' -f 2)"
 
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin:${PATH}"
 export STARSHIP_CONFIG="${HOME}/.starship"
 export ZSH="${HOME}/.oh-my-zsh"
 
@@ -19,4 +20,4 @@ source "${HOME}/.zsh_functions"
 
 eval "$(starship init zsh)"
 
-macchina --theme custom
+macchina
