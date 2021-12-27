@@ -1,6 +1,7 @@
 {
     "extensions": {
         "recommendations": [
+            "bungcip.better-toml",
             "eamodio.gitlens",
             "esbenp.prettier-vscode",
             "hashicorp.terraform",
@@ -8,6 +9,7 @@
             "ms-azuretools.vscode-docker",
             "ms-kubernetes-tools.vscode-kubernetes-tools",
             "ms-vscode-remote.remote-containers",
+            "rangav.vscode-thunder-client",
             "redhat.vscode-yaml"
         ]
     },
@@ -19,6 +21,9 @@
             "path": "./dotfiles"
         },
         {
+            "path": "./obsidian"
+        },
+        {
             "path": "./josecardoso.com"
         },
         {
@@ -27,11 +32,13 @@
     ],
     "settings": {
         "diffEditor.ignoreTrimWhitespace": false,
+        "editor.bracketPairColorization.enabled": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.fontFamily": "FiraCode Nerd Font Mono",
         "editor.fontLigatures": true,
         "editor.fontSize": 18,
         "editor.fontWeight": "normal",
+        "editor.guides.bracketPairs": "active",
         "editor.renderControlCharacters": true,
         "editor.renderWhitespace": "all",
         "explorer.confirmDelete": false,
@@ -40,6 +47,7 @@
         },
         "git.autofetch": true,
         "git.confirmSync": false,
+        "redhat.telemetry.enabled": false,
         "scm.defaultViewMode": "tree",
         "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
         "terminal.integrated.fontSize": 18,
