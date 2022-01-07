@@ -15,13 +15,13 @@
     },
     "folders": [
         {
+            "path": "/Volumes/Source/Work/fridaycardapp"
+        },
+        {
             "path": "/Volumes/Source/Work/jcardoso-test"
         },
         {
             "path": "/Volumes/Source/Work/joey-card"
-        },
-        {
-            "path": "/Volumes/Source/Work/joey-card-mobile"
         },
         {
             "path": "/Volumes/Source/Work/joey-webhooks"
