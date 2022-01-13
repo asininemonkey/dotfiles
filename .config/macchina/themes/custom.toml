@@ -39,3 +39,4 @@ cpu = "CPU"
 
 [palette]
 type = "Full"
+visible = true
