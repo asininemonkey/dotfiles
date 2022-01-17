@@ -1,5 +1,6 @@
 alias cleanse="awk '!/^ *#/ && NF'"
 alias googler="googler --count 5 --noprompt --time y1 --tld .co.uk"
+alias grpo="git remote prune origin"
 alias htop="btop"
 alias locate="mdfind"
 alias ls="ls -alG"
