@@ -18,6 +18,6 @@ source "${ZSH}/oh-my-zsh.sh"
 source "${HOME}/.zsh_aliases"
 source "${HOME}/.zsh_functions"
 
-eval "$(starship init zsh)"
-
 macchina
+
+eval "$(starship init zsh)"
