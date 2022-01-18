@@ -1,7 +1,6 @@
 # https://github.com/Macchina-CLI/macchina/wiki/Theme-Documentation
 
 padding = 0
-palette = "Full"
 separator = "->"
 
 [bar]
@@ -40,3 +39,7 @@ backlight = "Backlight"
 resolution = "Resolution"
 cpu_load = "CPU Load"
 cpu = "CPU"
+
+[palette]
+type = "Full"
+visible = true
