@@ -27,6 +27,9 @@
             "path": "/Volumes/Source/Work/joey-webhooks"
         },
         {
+            "path": "/Volumes/Source/Work/terraform-aws-ecr-module"
+        },
+        {
             "path": "/Volumes/Source/Work/terraform-shared-infrastructure"
         },
         {
