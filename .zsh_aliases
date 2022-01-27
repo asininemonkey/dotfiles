@@ -9,4 +9,6 @@ alias ping="prettyping"
 alias speedtest="speedtest --secure --share"
 alias top="btop"
 alias tree="tree -aghpuCD"
-alias wu="waypoint ui -authenticate"
+
+alias wid="waypoint install -accept-tos -context-create local -platform docker"
+alias wua="waypoint ui -authenticate"
