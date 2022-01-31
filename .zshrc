@@ -1,4 +1,14 @@
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/opt/homebrew/bin:${PATH}"
+if [ -f "/opt/homebrew/bin/brew" ]
+then
+  HOMEBREW_PATH="/opt/homebrew"
+fi
+
+if [ -f "/usr/local/bin/brew" ]
+then
+  HOMEBREW_PATH="/usr/local"
+fi
+
+export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${HOMEBREW_PATH}/bin:${PATH}"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html
 export AWS_PAGER=""
