@@ -1,4 +1,5 @@
 # https://starship.rs/config/#prompt
+command_timeout = 1000
 format = """\
     $username\
     $directory\

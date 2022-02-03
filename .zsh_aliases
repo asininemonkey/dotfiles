@@ -10,5 +10,12 @@ alias speedtest="speedtest --secure --share"
 alias top="btop"
 alias tree="tree -aghpuCD"
 
+alias tap="AWS_PROFILE=friday-production make terraform-apply-friday-production"
+alias tas="AWS_PROFILE=staging make terraform-apply-staging"
+alias tau="AWS_PROFILE=uat make terraform-apply-uat"
+alias tpp="AWS_PROFILE=friday-production make terraform-plan-friday-production"
+alias tps="AWS_PROFILE=staging make terraform-plan-staging"
+alias tpu="AWS_PROFILE=uat make terraform-plan-uat"
+
 alias wid="waypoint install -accept-tos -context-create local -platform docker"
 alias wua="waypoint ui -authenticate"
