@@ -11,7 +11,7 @@ fi
 export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:${HOMEBREW_PATH}/bin:${PATH}"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html
-export AWS_CLI_AUTO_PROMPT="on"
+# export AWS_CLI_AUTO_PROMPT="on"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-pagination.html
 export AWS_PAGER=""
