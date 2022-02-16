@@ -11,6 +11,11 @@ alias speedtest="speedtest --secure --share"
 alias top="btop"
 alias tree="tree -aghpuCD"
 
+alias rtl="/Volumes/Source/Work/.env/refreshAccessToken.sh local"
+alias rtp="/Volumes/Source/Work/.env/refreshAccessToken.sh friday-production"
+alias rts="/Volumes/Source/Work/.env/refreshAccessToken.sh staging"
+alias rtu="/Volumes/Source/Work/.env/refreshAccessToken.sh uat"
+
 alias tap="AWS_PROFILE=friday-production make terraform-apply-friday-production"
 alias tas="AWS_PROFILE=staging make terraform-apply-staging"
 alias tau="AWS_PROFILE=uat make terraform-apply-uat"
