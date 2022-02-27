@@ -1,0 +1,10 @@
+{
+  "version": "1.5",
+  "default_core_path": "~/.var/app/org.libretro.RetroArch/config/retroarch/cores/snes9x_libretro.so",
+  "default_core_name": "Nintendo - SNES / SFC (Snes9x - Current)",
+  "label_display_mode": 0,
+  "right_thumbnail_mode": 0,
+  "left_thumbnail_mode": 0,
+  "sort_mode": 0,
+  "items": []
+}
