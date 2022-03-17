@@ -1,0 +1,29 @@
+{
+    "settings": {
+        "controlbar": {
+            "active": false
+        },
+        "controls": [
+            "cards-end-screens",
+            "cinema-mode",
+            "screenshot",
+            "video-filters"
+        ],
+        "controlsvisible": true,
+        "darktheme": true,
+        "disableautoplay": true,
+        "hiderelated": true,
+        "miniplayerposition": "_top-right",
+        "newestcomments": true,
+        "qualityembeds": "hd720",
+        "qualityembedsfullscreen": "hd1080",
+        "qualityplaylists": "hd1080",
+        "qualityplaylistsfullscreen": "hd2160",
+        "qualityvideos": "hd1080",
+        "qualityvideosfullscreen": "hd2160",
+        "selectquality": true,
+        "selectqualityfullscreenoff": true,
+        "selectqualityfullscreenon": true
+    },
+    "version": "2.0.112"
+}
