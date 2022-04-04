@@ -1,0 +1,35 @@
+{
+    "extensions": {
+        "recommendations": [
+            "eamodio.gitlens",
+            "esbenp.prettier-vscode",
+            "mhutchie.git-graph"
+        ]
+    },
+    "folders": [
+        {
+            "path": "./macchina-bin"
+        }
+    ],
+    "settings": {
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.fontFamily": "Iosevka",
+        "editor.fontLigatures": true,
+        "editor.fontSize": 18,
+        "editor.fontWeight": "normal",
+        "editor.guides.bracketPairs": "active",
+        "editor.renderControlCharacters": true,
+        "editor.renderWhitespace": "all",
+        "explorer.confirmDelete": false,
+        "git.autofetch": true,
+        "git.confirmSync": false,
+        "redhat.telemetry.enabled": false,
+        "scm.defaultViewMode": "tree",
+        "terminal.integrated.fontFamily": "Iosevka",
+        "terminal.integrated.fontSize": 18,
+        "terminal.integrated.fontWeight": "normal",
+        "window.zoomLevel": 0.5
+    }
+}
