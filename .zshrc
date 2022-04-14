@@ -8,6 +8,8 @@ export ZSH="${HOME}/.oh-my-zsh"
 
 plugins=(git kubectl)
 
+source /etc/profile.d/vte.sh
+
 source "${ZSH}/oh-my-zsh.sh"
 
 source "${HOME}/.zsh_aliases"
