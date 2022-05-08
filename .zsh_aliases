@@ -1,3 +1,4 @@
+alias clean='sudo pacman --remove --cascade --nosave --recursive $(pacman --query --deps --quiet --unrequired)'
 alias dig='drill'
 alias dsp='docker system prune --all --volumes'
 alias grpo='git remote prune origin'
