@@ -7,6 +7,7 @@ alias installed='pacman --query --explicit'
 alias ls='ls --all --color=always -l'
 alias ping='prettyping'
 alias speedtest='speedtest --secure --share'
+alias themes='kitty +kitten themes'
 alias top='btop'
 alias tree='tree -aghpuCD'
 
