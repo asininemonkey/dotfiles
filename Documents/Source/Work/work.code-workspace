@@ -20,6 +20,12 @@
             "path": "./fridaycardapp"
         },
         {
+            "path": "./friday-batch"
+        },
+        {
+            "path": "./friday-harness"
+        },
+        {
             "path": "./jcardoso-test"
         },
         {
