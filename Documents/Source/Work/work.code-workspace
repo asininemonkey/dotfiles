@@ -26,6 +26,9 @@
             "path": "./friday-harness"
         },
         {
+            "path": "./harness"
+        },
+        {
             "path": "./jcardoso-test"
         },
         {
