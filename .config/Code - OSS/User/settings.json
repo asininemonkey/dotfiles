@@ -5,6 +5,7 @@
     "editor.guides.bracketPairs": "active",
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
+    "git.autofetch": true,
     "git.confirmSync": false,
     "redhat.telemetry.enabled": false,
     "telemetry.telemetryLevel": "off",
