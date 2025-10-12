@@ -29,7 +29,6 @@ packages:
       - mako
       - nautilus
       - niri
-      # - pipewire-jack # dependency: waybar
       - swayidle
       - swaylock
       - swww

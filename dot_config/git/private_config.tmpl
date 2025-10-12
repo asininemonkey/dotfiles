@@ -14,6 +14,6 @@
     insteadOf = https://github.com
 
 [user]
-    email = 65740649+asininemonkey@users.noreply.github.com
-    name = Jose Cardoso
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQowLl5Bzn87ig+Gs7Ze5kWODRTdHiD+V8sOCwOx16Z
+    email = {{ .user.email }}
+    name = {{ .user.name.full }}
+    signingkey = {{ .user.ssh.public }}

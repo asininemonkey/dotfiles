@@ -6,4 +6,4 @@ yay --needed --noconfirm --sync {{- range .packages.arch.aur }} {{ . }}{{ end }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.core }} {{ . }}{{ end }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.extra }} {{ . }}{{ end }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.niri }} {{ . }}{{ end }}
-{{ end -}}
+{{ end }}
