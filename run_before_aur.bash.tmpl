@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/usr/bin/env bash
+
+set -eu
+
+if ! type yay &> /dev/null
+then
+    YAY_RELEASE=$(curl --location --silent https://api.github.com/repos/jguer/yay/releases/latest | jq --raw-output '.tag_name | sub("v"; "")')
+
+    curl --location --silent https://github.com/Jguer/yay/releases/download/v${YAY_RELEASE}/yay_${YAY_RELEASE}_{{- range .external.lscpu -}}{{- if eq .field "Architecture:" -}}{{ .data }}{{- end -}}{{- end -}}.tar.gz | tar --directory /tmp --extract --gzip --no-anchored --strip-components 1 --wildcards yay
+
+    sudo --user {{ .user.name.short }} /tmp/yay --noconfirm --sync yay-bin
+fi
+{{ end }}

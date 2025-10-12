@@ -1,0 +1,31 @@
+{
+	"extensions": {
+		"recommendations": [
+			"editorconfig.editorconfig",
+		    "github.vscode-github-actions",
+			"hashicorp.terraform",
+			"jinliming2.vscode-go-template",
+			"redhat.vscode-yaml",
+		]
+	},
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../.local/share/chezmoi"
+		},
+	],
+	"settings": {
+		"editor.fontFamily": "IosevkaTerm NFM",
+		"editor.fontSize": 16,
+		"git.autofetch": "all",
+		"git.confirmSync": false,
+		"go-template.patterns": ["**/*.tmpl"],
+		"redhat.telemetry.enabled": false,
+        "scm.repositories.visible": 0,
+		"telemetry.editStats.enabled": false,
+		"telemetry.feedback.enabled": false,
+		"terminal.integrated.allowChords": false,
+	}
+}

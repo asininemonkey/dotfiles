@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://www.schemastore.org/lazydocker.json
+---
+customCommands:
+  containers:
+    # https://pkg.go.dev/github.com/jesseduffield/lazydocker/pkg/commands#Container
+    - name: dive
+      attach: true
+      command: 'dive {{ .Container.Container.Image }}'
+    - name: trivy
+      attach: true
+      command: 'trivy image --disable-telemetry {{ .Container.Container.Image }}'
+  images:
+    # https://pkg.go.dev/github.com/jesseduffield/lazydocker/pkg/commands#Image
+    - name: dive
+      attach: true
+      command: 'dive {{ .Image.Name }}:{{ .Image.Tag }}'
+    - name: trivy
+      attach: true
+      command: 'trivy image --disable-telemetry {{ .Image.Name }}:{{ .Image.Tag }}'
+gui:
+  # https://pkg.go.dev/github.com/jesseduffield/lazydocker/pkg/config?utm_source=godoc#GuiConfig
+  showAllContainers: true

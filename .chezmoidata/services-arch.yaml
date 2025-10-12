@@ -1,0 +1,25 @@
+---
+services:
+  arch:
+    amd:
+      system:
+        - ollama
+      user:
+    common:
+      system:
+        - docker
+        - sshd
+        - tailscaled
+      user:
+    gui:
+      system:
+        - greetd
+      user:
+    nvidia:
+      system:
+        - ollama
+      user:
+    vmware:
+      system:
+        - vmtoolsd
+      user:

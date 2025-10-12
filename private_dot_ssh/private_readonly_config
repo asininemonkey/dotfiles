@@ -1,0 +1,12 @@
+Host *
+	IdentityAgent ~/.1password/agent.sock
+
+Host firewalla
+	HostName 192.168.144.1
+	User pi
+
+Host pi
+	HostName 192.168.144.5
+
+HostKeyAlgorithms sk-ssh-ed25519-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,ssh-ed25519-cert-v01@openssh.com,ssh-ed25519
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-512

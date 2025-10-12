@@ -1,0 +1,44 @@
+# Use Bash For TTY
+if [ $(tput colors) != "256" ]
+then
+    exec bash --login
+fi
+
+# Zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
+
+## Oh My Zsh Libraries
+zinit snippet OMZL::history.zsh
+
+## Oh My Zsh Plugins
+zinit snippet OMZP::git
+zinit snippet OMZP::kubectl
+zinit snippet OMZP::terraform
+
+# compinit
+autoload -Uz compinit
+compinit
+
+# History Options
+setopt HIST_SAVE_NO_DUPS
+
+# Aliases
+if [ -f ${HOME}/.zshaliases ]
+then
+    source ${HOME}/.zshaliases
+fi
+
+# Zsh Line Editor
+typeset -g -A key
+
+bindkey -- "${terminfo[kdch1]}" delete-char
+bindkey -- "${terminfo[kLFT5]}" backward-word
+bindkey -- "${terminfo[kRIT5]}" forward-word
+
+# Prompt
+fastfetch
+
+echo
+
+eval "$(oh-my-posh --config ${HOME}/.config/oh-my-posh/config.json init zsh)"

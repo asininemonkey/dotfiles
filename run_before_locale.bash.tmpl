@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if ! grep en_GB /etc/locale.conf &> /dev/null
+then
+    sudo rm --force \
+        /etc/locale.conf \
+        /etc/locale.gen \
+        /etc/localtime \
+        /etc/vconsole.conf
+
+cat << EOF | sudo tee /etc/locale.conf > /dev/null
+LANG=en_GB.UTF-8
+LANGUAGE=en_GB
+LC_ALL=en_GB.UTF-8
+EOF
+
+cat << EOF | sudo tee /etc/vconsole.conf > /dev/null
+FONT=default8x16
+KEYMAP=uk
+XKBLAYOUT=gb
+XKBMODEL=pc105
+XKBOPTIONS=terminate:ctrl_alt_bksp
+EOF
+
+    echo 'en_GB.UTF-8 UTF-8' | sudo tee /etc/locale.gen > /dev/null
+
+    sudo ln --force --symbolic /etc/locale.conf /etc/default/locale
+    sudo ln --force --symbolic /etc/vconsole.conf /etc/default/keyboard
+    sudo ln --force --symbolic /usr/share/zoneinfo/Europe/London /etc/localtime
+
+    sudo locale-gen
+fi

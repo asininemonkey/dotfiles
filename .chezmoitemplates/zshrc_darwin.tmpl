@@ -1,0 +1,12 @@
+autoload -U compinit
+
+compinit
+
+setopt HIST_SAVE_NO_DUPS
+
+if [ -f ${HOME}/.zshaliases ]
+then
+    source ${HOME}/.zshaliases
+fi
+
+fastfetch

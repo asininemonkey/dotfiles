@@ -1,0 +1,16 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (not (contains "WSL2" .chezmoi.kernel.osrelease)) -}}
+#!/usr/bin/env bash
+
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists --user geforcenow https://international.download.nvidia.com/GFNLinux/flatpak/geforcenow.flatpakrepo
+
+flatpak install --noninteractive --user {{- range .packages.flatpak }} {{ . }}{{ end }}
+flatpak install --noninteractive --user {{- range .packages.geforcenow }} {{ . }}{{ end }}
+
+flatpak update --noninteractive --user
+
+flatpak uninstall --noninteractive --unused --user
+
+# Patches
+sed --in-place 's/"tvMode": false/"tvMode": true/' "$(find ${HOME}/.local/share/flatpak/app/com.nvidia.geforcenow -name config.json -type f)"
+{{ end }}

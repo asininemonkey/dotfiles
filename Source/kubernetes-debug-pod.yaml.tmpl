@@ -1,0 +1,110 @@
+# kubectl exec --namespace {{ .user.name.short }} --stdin --tty alpine -- /bin/sh
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ .user.name.short }}
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce-version: latest
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  name: {{ .user.name.short }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ .user.name.short }}
+  name: {{ .user.name.short }}
+  namespace: {{ .user.name.short }}
+data:
+  bootstrap.bash: |
+    #!/usr/bin/env sh
+    set -ex
+    apk add --force-refresh --no-cache stress-ng tini
+    # tini -s -- stress-ng --cpu 0
+    # tini -s -- stress-ng --vm 1 --vm-bytes 128M --vm-keep
+    tini -s -- sleep infinity
+# ---
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   labels:
+#     app.kubernetes.io/name: {{ .user.name.short }}
+#   name: {{ .user.name.short }}
+#   namespace: {{ .user.name.short }}
+# spec:
+#   accessModes:
+#     - ReadWriteMany
+#   resources:
+#     requests:
+#       storage: 8Gi
+#   storageClassName: {{ .user.name.short }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: {{ .user.name.short }}
+  name: {{ .user.name.short }}
+  namespace: {{ .user.name.short }}
+spec:
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ .user.name.short }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ .user.name.short }}
+    spec:
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - podAffinityTerm:
+                labelSelector:
+                  matchExpressions:
+                    - key: app.kubernetes.io/name
+                      operator: In
+                      values:
+                        - {{ .user.name.short }}
+                topologyKey: kubernetes.io/hostname
+              weight: 100
+      containers:
+        - command:
+            - /bootstrap.bash
+          image: alpine
+          imagePullPolicy: Always
+          name: alpine
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 256M
+            requests:
+              cpu: 500m
+              memory: 128M
+          securityContext:
+            capabilities:
+              add:
+                - NET_ADMIN
+          volumeMounts:
+            - mountPath: /bootstrap.bash
+              name: {{ .user.name.short }}
+              subPath: bootstrap.bash
+            # - mountPath: /mnt/{{ .user.name.short }}
+            #   name: {{ .user.name.short }}
+      volumes:
+        - configMap:
+            defaultMode: 0555
+            name: {{ .user.name.short }}
+          name: {{ .user.name.short }}
+        # - persistentVolumeClaim:
+        #     claimName: {{ .user.name.short }}
+        #   name: {{ .user.name.short }}

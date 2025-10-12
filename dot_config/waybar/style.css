@@ -1,0 +1,172 @@
+/* https://github.com/catppuccin/waybar/blob/main/themes/mocha.css */
+@define-color base #1e1e2e;
+@define-color blue #89b4fa;
+@define-color crust #11111b;
+@define-color flamingo #f2cdcd;
+@define-color green #a6e3a1;
+@define-color lavender #b4befe;
+@define-color mantle #181825;
+@define-color maroon #eba0ac;
+@define-color mauve #cba6f7;
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+@define-color peach #fab387;
+@define-color pink #f5c2e7;
+@define-color red #f38ba8;
+@define-color rosewater #f5e0dc;
+@define-color sapphire #74c7ec;
+@define-color sky #89dceb;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+@define-color teal #94e2d5;
+@define-color text #cdd6f4;
+@define-color yellow #f9e2af;
+
+@keyframes blink {
+    to {
+        color: @surface0;
+        background-color: @red;
+    }
+}
+
+* {
+    font-family: Noto Sans;
+    font-size: 14px;
+    min-height: 0;
+}
+
+#battery,
+#cpu,
+#custom-date,
+#custom-time,
+#group-power,
+#idle_inhibitor,
+#memory,
+#network,
+#tray,
+#wireplumber {
+    background-color: @surface0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+}
+
+#battery,
+#cpu,
+#idle_inhibitor,
+#memory,
+#network,
+#wireplumber {
+    padding-right: 1.5rem;
+}
+
+#battery {
+    color: @pink;
+    margin-left: 0.5rem;
+}
+
+#battery.critical {
+    animation-direction: alternate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-name: blink;
+    animation-timing-function: linear;
+    color: @red;
+}
+
+#battery.warning {
+    color: @orange;
+}
+
+#cpu {
+    color: @maroon;
+    margin-left: 0.5rem;
+}
+
+#custom-date {
+    color: @teal;
+}
+
+#custom-lock {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    padding-right: 0.25rem;
+}
+
+#custom-quit,
+#custom-reboot,
+#custom-shutdown,
+#custom-suspend {
+    padding-right: 1.5rem;
+}
+
+#custom-time {
+    color: @green;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#group-power {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+#idle_inhibitor {
+    color: @yellow;
+}
+
+#memory {
+    color: @red;
+    margin-left: 0.5rem;
+}
+
+#network {
+    color: @mauve;
+    margin-left: 0.5rem;
+}
+
+#tray {
+    margin-left: 0.5rem;
+}
+
+#waybar {
+    background: transparent;
+    color: @text;
+}
+
+#wireplumber {
+    color: @peach;
+}
+
+#workspaces {
+    background-color: @surface0;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#workspaces button {
+    border-radius: 0.5rem;
+    color: @lavender;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+#workspaces button.active {
+    color: @sky;
+}
+
+#workspaces button:hover {
+    color: @sapphire;
+}

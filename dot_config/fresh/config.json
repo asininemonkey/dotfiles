@@ -1,0 +1,25 @@
+{
+  "active_keybinding_map": "vscode",
+  "languages": {
+    "terraform": {
+      "auto_indent": true,
+      "comment_prefix": "#",
+      "extensions": [
+        "hcl",
+        "tf",
+        "tfvars"
+      ],
+      "grammar": "terraform"
+    }
+  },
+  "lsp": {
+    "terraform": {
+      "args": [
+        "serve"
+      ],
+      "command": "terraform-ls",
+      "enabled": true
+    }
+  },
+  "theme": "dark"
+}

@@ -1,0 +1,42 @@
+---
+age:
+  passphrase: true
+
+data:
+  display:
+    {{ if eq .chezmoi.hostname "asrock-x570-linux" -}}
+    height: 1440
+    output: DP-1
+    refresh: 119.991
+    scale: 1.33
+    width: 3440
+    {{- else if eq .chezmoi.hostname "asus-zenbook" -}}
+    height: 1620
+    output: eDP-1
+    refresh: 120.002
+    scale: 1.5
+    width: 2880
+    {{- else if eq .chezmoi.hostname "arch-linux-vm" -}}
+    height: 2048
+    output: Virtual-1
+    refresh: 60.000
+    scale: 1.33
+    width: 1152
+    {{- else -}}
+    height: xxx
+    output: xxx
+    refresh: xxx
+    scale: xxx
+    width: xxx
+    {{- end }}
+  external:
+    {{ output "lscpu" "--json" }}
+
+edit:
+  {{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
+  args:
+    - --wait
+  command: zeditor
+  {{- end }}
+
+encryption: age

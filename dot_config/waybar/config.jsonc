@@ -1,0 +1,134 @@
+{
+  "battery": {
+    "events": {
+      "on-charging-100": "notify-send --urgency normal 'Battery Full'",
+      "on-discharging-critical": "notify-send --urgency critical 'Very Low Battery'",
+      "on-discharging-warning": "notify-send --urgency normal 'Low Battery'"
+    },
+    "format-charging": "{capacity}% {icon}",
+    "format-discharging": "{capacity}% {icon}",
+    "format-full": "{capacity}% 󱟢",
+    "format-icons": {
+      "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "discharging": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "interval": 1,
+    "states": {
+      "critical": 10,
+      "warning": 20
+    }
+  },
+  "clock": {
+    "calendar": {
+      "mode": "year",
+      "mode-mon-col": 4
+    },
+    "format": "{:%OI:%M:%S %p}",
+    "tooltip-format": "<tt>{calendar}</tt>"
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "interval": 1,
+    "on-click": "ghostty -e btop --preset 1"
+  },
+  "custom/date": {
+    "exec": "date +'%A, %B %-d, %Y'",
+    "interval": 1
+  },
+  "custom/lock": {
+    "format": "",
+    "on-click": "swaylock --daemonize",
+    "tooltip": true,
+    "tooltip-format": "Lock"
+  },
+  "custom/quit": {
+    "format": "󰗼",
+    "on-click": "niri msg action quit",
+    "tooltip": true,
+    "tooltip-format": "Quit"
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "on-click": "systemctl reboot",
+    "tooltip": true,
+    "tooltip-format": "Reboot"
+  },
+  "custom/shutdown": {
+    "format": "󰤆",
+    "on-click": "systemctl poweroff",
+    "tooltip": true,
+    "tooltip-format": "Shutdown"
+  },
+  "custom/suspend": {
+    "format": "󰤄",
+    "on-click": "swaylock --daemonize && systemctl suspend",
+    "tooltip": true,
+    "tooltip-format": "Suspend"
+  },
+  "custom/time": {
+    "exec": "date +'%-I:%M %p'",
+    "interval": 1
+  },
+  "group/group-power": {
+    "drawer": {
+      "children-class": "not-power",
+      "transition-duration": 500,
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/lock",
+      "custom/shutdown",
+      "custom/reboot",
+      "custom/suspend",
+      "custom/quit"
+    ],
+    "orientation": "inherit"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "layer": "top",
+  "memory": {
+    "format": "{percentage}% ",
+    "interval": 1,
+    "on-click": "ghostty -e btop --preset 1"
+  },
+  "modules-center": ["custom/date", "custom/time", "idle_inhibitor"],
+  "modules-left": ["niri/workspaces"],
+  "modules-right": [
+    "wireplumber",
+    "cpu",
+    "memory",
+    "network",
+    "battery",
+    "tray",
+    "group/group-power"
+  ],
+  "network": {
+    "format-disconnected": "",
+    "format-ethernet": "{ifname} ",
+    "format-wifi": "{signalStrength}% ",
+    "interval": 1,
+    "on-click": "nm-connection-editor",
+    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-ethernet": "{ifname} ({ipaddr})",
+    "tooltip-format-wifi": "{essid} ({ipaddr})"
+  },
+  "position": "top",
+  "tray": {
+    "icon-size": 20,
+    "spacing": 10
+  },
+  "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+    "format-muted": "0% ",
+    "on-click": "pavucontrol"
+  }
+}

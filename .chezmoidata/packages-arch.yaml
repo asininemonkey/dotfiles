@@ -1,0 +1,106 @@
+---
+packages:
+  arch:
+    amd:
+      extra:
+        - ollama-rocm
+    common:
+      aur:
+        - 1password-cli
+        - amazon-ecr-credential-helper
+        - edk2-ovmf-fedora
+        - fresh-editor-bin
+        - grype-bin
+        - kubelogin
+        - terramate
+      core:
+        - ldns
+        - man-db
+        - openssh
+      extra:
+        - age
+        - aws-cli-v2
+        - brightnessctl
+        - btop
+        - chezmoi
+        - cosign
+        - cyme
+        - dive
+        - docker
+        - docker-buildx
+        - eza
+        - fastfetch
+        - git
+        - helm
+        - inxi
+        - jq
+        - k9s
+        - kubectl
+        - lazydocker
+        - lazygit
+        - libfido2
+        - libiscsi
+        - mesa-utils
+        - noto-fonts
+        - nvme-cli
+        - oha
+        - opentofu
+        - popeye
+        - qemu-desktop
+        - scrcpy
+        - speedtest-cli
+        - swtpm
+        - tailscale
+        - tailspin
+        - terraform
+        - trippy
+        - trivy
+        - unzip
+        - virglrenderer
+        - vlc
+        - vlc-plugin-ffmpeg
+        - vlc-plugin-x264
+        - vlc-plugin-x265
+        - vulkan-tools
+        - wget
+        - xdg-utils
+        - zsh
+    gui:
+      aur:
+        - 1password
+        - localsend
+        - phinger-cursors
+        - waypaper
+      extra:
+        - cosmic-greeter
+        - firefox-i18n-en-gb
+        - flatpak
+        - fuzzel
+        - ghostty
+        - ghostty-nautilus
+        - gnome-keyring
+        - gvfs-dnssd
+        - gvfs-nfs
+        - gvfs-smb
+        - mako
+        - nautilus
+        - niri
+        - nm-connection-editor
+        - papirus-icon-theme
+        - pavucontrol
+        - polymath
+        - seahorse
+        - signal-desktop
+        - swayidle
+        - swaylock
+        - swww
+        - ttf-iosevkaterm-nerd
+        - waybar
+        - wayland-utils
+        - wl-clipboard
+        - xdg-desktop-portal-gnome
+        - xwayland-satellite
+        - zed
+    nvidia:
+      extra:
+        - ollama-cuda

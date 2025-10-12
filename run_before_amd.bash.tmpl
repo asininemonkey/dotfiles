@@ -1,0 +1,11 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.hostname "asus-zenbook") -}}
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! -f /etc/mkinitcpio.conf.d/amd.conf ]
+then
+    echo 'MODULES=(amdgpu)' | sudo tee /etc/mkinitcpio.conf.d/amd.conf > /dev/null
+    sudo mkinitcpio --allpresets
+fi
+{{ end }}

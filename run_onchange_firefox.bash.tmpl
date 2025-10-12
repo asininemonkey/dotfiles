@@ -1,0 +1,16 @@
+{{ if env "XDG_SESSION_DESKTOP" -}}
+#!/usr/bin/env bash
+
+# {{ include "dot_config/mozilla/private_firefox/autoconfig.js" | sha256sum }}
+# {{ include "dot_config/mozilla/private_firefox/firefox.cfg" | sha256sum }}
+# {{ include "dot_config/mozilla/private_firefox/policies.json" | sha256sum }}
+
+if [ ! -d /etc/firefox/policies ]
+then
+    sudo mkdir --parents /etc/firefox/policies
+fi
+
+sudo cp "${HOME}/.config/mozilla/firefox/autoconfig.js" /usr/lib/firefox/defaults/pref/autoconfig.js
+sudo cp "${HOME}/.config/mozilla/firefox/firefox.cfg" /usr/lib/firefox/firefox.cfg
+sudo cp "${HOME}/.config/mozilla/firefox/policies.json" /etc/firefox/policies/policies.json
+{{- end }}

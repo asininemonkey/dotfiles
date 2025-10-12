@@ -1,0 +1,4 @@
+k9s:
+  portForwardAddress: 127.0.0.1
+  shellPod:
+    image: archlinux

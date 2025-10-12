@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -eu
+
+sudo mkdir --parents /etc/greetd
+
+cat << EOF | sudo tee /etc/greetd/config.toml > /dev/null
+[default_session]
+command = "cosmic-greeter-start"
+user = "cosmic-greeter"
+
+[general]
+service = "login"
+
+[terminal]
+vt = "1"
+EOF

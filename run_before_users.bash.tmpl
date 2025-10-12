@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! $(getent passwd | grep '{{ .user.name.short }}.*zsh') ]
+then
+    sudo usermod --append --groups 'tss,uucp' --shell '/usr/bin/zsh' '{{ .user.name.short }}'
+fi
+
+if [ ! -f /etc/sudoers.d/99_timestamp_timeout ]
+then
+    echo 'Defaults timestamp_timeout=10' | sudo tee /etc/sudoers.d/99_timestamp_timeout > /dev/null
+    sudo chmod 0440 /etc/sudoers.d/99_timestamp_timeout
+fi

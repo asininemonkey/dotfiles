@@ -1,0 +1,39 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/usr/bin/env bash
+
+{{- if and (.services.arch.amd.system) (eq .chezmoi.hostname "asus-zenbook") }}
+sudo systemctl enable --now {{- range .services.arch.amd.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if and (.services.arch.amd.user) (eq .chezmoi.hostname "asus-zenbook") }}
+sudo systemctl enable --now {{- range .services.arch.amd.user }} {{ . }}{{ end }}
+{{- end }}
+
+{{- if .services.arch.common.system }}
+sudo systemctl enable --now {{- range .services.arch.common.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if .services.arch.common.user }}
+systemctl --user enable {{- range .services.arch.common.user }} {{ . }}{{ end }}
+{{- end }}
+
+{{- if and (.services.arch.gui.system) (not (contains "WSL2" .chezmoi.kernel.osrelease)) }}
+sudo systemctl enable --now {{- range .services.arch.gui.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if and (.services.arch.gui.user) (not (contains "WSL2" .chezmoi.kernel.osrelease)) }}
+sudo systemctl enable --now {{- range .services.arch.gui.user }} {{ . }}{{ end }}
+{{- end }}
+
+{{- if and (.services.arch.nvidia.system) (eq .chezmoi.hostname "asrock-x570-linux") }}
+sudo systemctl enable --now {{- range .services.arch.nvidia.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if and (.services.arch.nvidia.user) (eq .chezmoi.hostname "asrock-x570-linux") }}
+sudo systemctl enable --now {{- range .services.arch.nvidia.user }} {{ . }}{{ end }}
+{{- end }}
+
+{{- if and (.services.arch.vmware.system) (eq .chezmoi.hostname "arch-linux-vm") }}
+sudo systemctl enable --now {{- range .services.arch.vmware.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if and (.services.arch.vmware.user) (eq .chezmoi.hostname "arch-linux-vm") }}
+sudo systemctl enable --now {{- range .services.arch.vmware.user }} {{ . }}{{ end }}
+{{- end }}
+
+{{ end }}

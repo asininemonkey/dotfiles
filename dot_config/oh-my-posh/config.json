@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#ebcc34",
+          "foreground": "#000000",
+          "index": 5,
+          "powerline_symbol": "",
+          "style": "powerline",
+          "template": " 󱃾 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
+          "type": "kubectl"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "extends": "~/.config/oh-my-posh/theme.json",
+  "final_space": true,
+  "version": 4
+}

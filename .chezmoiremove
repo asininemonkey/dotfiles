@@ -1,0 +1,7 @@
+.bash*
+.gnupg/public-keys.d/pubring.db.lock
+.lesshst
+.local/state/lesshst
+.profile
+.sudo_as_admin_successful
+.wget-hsts

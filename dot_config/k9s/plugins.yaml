@@ -1,0 +1,48 @@
+plugins:
+  # https://github.com/derailed/k9s/blob/master/plugins/
+  debug:
+    args:
+      - -c
+      - 'kubectl debug --image nicolaka/netshoot:latest --kubeconfig ${KUBECONFIG} --namespace ${NAMESPACE} ${POD} --share-processes --stdin --target ${NAME} --tty -- bash'
+    background: false
+    command: bash
+    confirm: true
+    dangerous: true
+    description: Attach debug container
+    scopes:
+      - containers
+    shortCut: Shift-D
+  dive:
+    args:
+      - ${COL-IMAGE}
+    background: false
+    command: dive
+    confirm: false
+    description: Inspect container image with Dive
+    scopes:
+      - containers
+    shortCut: d
+  grype:
+    args:
+      - -c
+      - 'grype --file /tmp/grype-output.txt ${COL-IMAGE} && less --quit-on-intr --raw-control-chars /tmp/grype-output.txt'
+    background: false
+    command: bash
+    confirm: false
+    description: Scan container image with Grype
+    overwriteOutput: false
+    scopes:
+      - containers
+    shortCut: g
+  trivy:
+    args:
+      - -c
+      - 'script --command "trivy image ${COL-IMAGE}" --flush --quiet --return /tmp/trivy-output.txt > /dev/null && less --quit-on-intr --raw-control-chars /tmp/trivy-output.txt'
+    background: false
+    command: bash
+    confirm: false
+    description: Scan container image with Trivy
+    overwriteOutput: false
+    scopes:
+      - containers
+    shortCut: t
