@@ -29,10 +29,10 @@ packages:
       - mako
       - nautilus
       - niri
-      - pipewire-jack # dependency: waybar
+      # - pipewire-jack # dependency: waybar
       - swayidle
       - swaylock
       - swww
       - waybar
-      - xdg-desktop-portal-wlr
+      - xdg-desktop-portal-gnome
       - xwayland-satellite
