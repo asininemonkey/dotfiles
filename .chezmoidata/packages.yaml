@@ -1,0 +1,38 @@
+packages:
+  arch:
+    aur:
+      - paru-bin
+      - phinger-cursors
+      - yay-bin
+    core:
+      - man-db
+      - nano
+      - openssh
+    extra:
+      - age
+      - btop
+      - chezmoi
+      - docker
+      - fastfetch
+      - firefox-i18n-en-gb
+      - ghostty
+      - git
+      - k9s
+      - noto-fonts # dependency: firefox
+      - signal-desktop
+      - tree
+      - ttf-iosevkaterm-nerd
+      - wget
+      - zed
+    niri:
+      - fuzzel
+      - mako
+      - nautilus
+      - niri
+      - pipewire-jack # dependency: waybar
+      - swayidle
+      - swaylock
+      - swww
+      - waybar
+      - xdg-desktop-portal-wlr
+      - xwayland-satellite

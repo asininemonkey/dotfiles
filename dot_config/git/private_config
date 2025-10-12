@@ -1,0 +1,16 @@
+[commit]
+    gpgsign = true
+
+[core]
+    editor = "zeditor --wait"
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
+
+[user]
+    email = 65740649+asininemonkey@users.noreply.github.com
+    name = Jose Cardoso
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQowLl5Bzn87ig+Gs7Ze5kWODRTdHiD+V8sOCwOx16Z
