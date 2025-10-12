@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! $(getent passwd | grep '{{ .user.name.short }}.*zsh') ]
+then
+    sudo usermod --shell /usr/bin/zsh {{ .user.name.short }}
+fi

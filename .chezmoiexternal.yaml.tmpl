@@ -1,0 +1,58 @@
+---
+.cache/oh-my-posh/themes:
+  checksum.sha256: 9796bee062fa8eacf4ad0150c2784fea640d9bd73431697e5bedf68e72660ad9
+  type: archive
+  url: https://cdn.ohmyposh.dev/releases/v28.4.0/themes.zip
+
+.config/ghostty/glow-rgbsplit-twitchy.glsl:
+  checksum.sha256: 0cac082999383177bba715d373f0c4a2f558eeb9ee62231e5d7cbe862b0552ad
+  type: file
+  url: https://raw.githubusercontent.com/m-ahdal/ghostty-shaders/refs/heads/main/glow-rgbsplit-twitchy.glsl
+
+.local/bin/cilium:
+  checksum.sha256: 15978aaf82373b0682aa87ab217848b3fb6e3cd80adad365d34696fe92543923
+  executable: true
+  path: cilium
+  type: archive-file
+  url: https://github.com/cilium/cilium-cli/releases/download/v0.18.9/cilium-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+
+.local/bin/hubble:
+  checksum.sha256: 17d893e708ad1a7dddfb787988924661e1ef26f421a06d7cfcb9410091f9ea9b
+  executable: true
+  path: hubble
+  type: archive-file
+  url: https://github.com/cilium/hubble/releases/download/v1.18.3/hubble-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+
+.local/bin/oh-my-posh:
+  checksum.sha256: cc31c3d6790338f16646fc53f556550bad7500984fea0446ebebe176e3b57cef
+  executable: true
+  type: file
+  url: https://cdn.ohmyposh.dev/releases/v28.4.0/posh-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+
+.local/bin/omnictl:
+  checksum.sha256: c32eec857f6ee09d061f282fdc47d5d6bfb102368104d013572dfdb47df934cd
+  executable: true
+  type: file
+  url: https://github.com/siderolabs/omni/releases/download/v1.4.2/omnictl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+
+.local/bin/talosctl:
+  checksum.sha256: bc425b0bfbf738716a71b67d612645ee0021f06e271ba8a73dc54b72f72fdf33
+  executable: true
+  type: file
+  url: https://github.com/siderolabs/talos/releases/download/v1.11.6/talosctl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+
+.local/share/zinit/zinit.git:
+  type: git-repo
+  url: https://github.com/zdharma-continuum/zinit.git
+
+{{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
+Pictures/Wallpapers/lock.png:
+  checksum.sha256: 5bc03c8a8de1551b9f5d6928f3a0490b66e6f839622d3ee5ff750ac0598ca50b
+  type: file
+  url: https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/digital/a_cartoon_of_a_house_on_a_cliff.png
+
+Pictures/Wallpapers/default.jpg:
+  checksum.sha256: a788a581ce7bee14bec937747a523482fc0ec769963213264de85dc32285bf9e
+  type: file
+  url: https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/unsorted/a_group_of_people_standing_on_a_road_with_a_city_in_the_background.jpg
+{{- end }}

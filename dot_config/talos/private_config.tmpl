@@ -1,0 +1,8 @@
+context: {{ lower .user.name.first }}-{{ lower .user.name.last }}
+contexts:
+  {{ lower .user.name.first }}-{{ lower .user.name.last }}:
+    auth:
+      siderov1:
+        identity: siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
+    endpoints:
+      - https://{{ lower .user.name.first }}-{{ lower .user.name.last }}.eu-central-1.omni.siderolabs.io

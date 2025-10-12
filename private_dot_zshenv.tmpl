@@ -1,0 +1,16 @@
+export AWS_PAGER=""
+export AWS_SDK_LOAD_CONFIG="true"
+export EDITOR="nano"
+export EXA_ICON_SPACING="2"
+export HISTFILE="${HOME}/.zshhistory"
+export HISTSIZE=10000
+export KUBECONFIG="${HOME}/.kube/home"
+export OMNICONFIG="${HOME}/.config/omni/config"
+export PATH=${PATH}:${HOME}/.local/bin
+export SAVEHIST=10000
+export TALOSCONFIG="${HOME}/.config/talos/config"
+
+{{- if and (contains "WSL2" .chezmoi.kernel.osrelease) (eq .chezmoi.osRelease.id "arch") }}
+export GALLIUM_DRIVER=d3d12
+export LIBVA_DRIVER_NAME=d3d12
+{{- end }}

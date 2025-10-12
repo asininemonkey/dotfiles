@@ -1,0 +1,85 @@
+---
+packages:
+  arch:
+    aur:
+      - 1password-cli
+      - amazon-ecr-credential-helper
+      - kubelogin
+      - terramate
+    core:
+      - ldns
+      - man-db
+      - nano
+      - openssh
+    extra:
+      - age
+      - aws-cli-v2
+      - brightnessctl
+      - btop
+      - chezmoi
+      - cosign
+      - cyme
+      - dive
+      - docker
+      - docker-buildx
+      - eza
+      - fastfetch
+      - git
+      - helm
+      - jq
+      - k9s
+      - kubectl
+      - lazydocker
+      - lazygit
+      - libfido2
+      - noto-fonts
+      - oha
+      - opentofu
+      - popeye
+      - scrcpy
+      - speedtest-cli
+      - tailscale
+      - tailspin
+      - terraform
+      - trippy
+      - trivy
+      - unzip
+      - vulkan-tools
+      - wget
+      - xdg-utils
+      - zsh
+    gui:
+      aur:
+        - 1password
+        - phinger-cursors
+        - sddm-silent-theme
+        - waypaper
+      core:
+      extra:
+        - firefox-i18n-en-gb
+        - flatpak
+        - fuzzel
+        - ghostty
+        - gnome-keyring
+        - gvfs-dnssd
+        - gvfs-nfs
+        - gvfs-smb
+        - kwin # Dependency: sddm (kwin_wayland)
+        - mako
+        - nautilus
+        - niri
+        - nm-connection-editor
+        - papirus-icon-theme
+        - pavucontrol
+        - sddm
+        - seahorse
+        - signal-desktop
+        - swayidle
+        - swaylock
+        - swww
+        - ttf-iosevkaterm-nerd
+        - waybar
+        - wayland-utils
+        - xdg-desktop-portal-gnome
+        - xwayland-satellite
+        - zed

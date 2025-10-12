@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! -f /etc/sddm.conf ]
+then
+cat << EOF | sudo tee /etc/sddm.conf > /dev/null
+[General]
+DisplayServer=wayland
+GreeterEnvironment=QML2_IMPORT_PATH=/usr/share/sddm/themes/silent/components,QT_FONT_DPI=192,QT_IM_MODULE=qtvirtualkeyboard,QT_SCREEN_SCALE_FACTORS=2,QT_WAYLAND_SHELL_INTEGRATION=layer-shell
+
+[Theme]
+Current=silent
+
+[Wayland]
+CompositorCommand=kwin_wayland --drm --inputmethod qtvirtualkeyboard --locale1 --no-global-shortcuts --no-lockscreen
+EOF
+fi

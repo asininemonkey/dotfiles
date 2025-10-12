@@ -1,0 +1,6 @@
+{{ if eq .chezmoi.hostname "asus-zenbook" -}}
+timeout 150 'brightnessctl --save set 10%' resume 'brightnessctl --restore'
+{{ end -}}
+timeout 300 'swaylock'
+timeout 450 'niri msg output {{ .display.output }} off' resume 'niri msg output {{ .display.output }} on'
+timeout {{ if eq .chezmoi.hostname "asus-zenbook" -}} 600 {{- else -}} 3600 {{- end }} 'systemctl suspend'

@@ -1,0 +1,11 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (not (contains "WSL2" .chezmoi.kernel.osrelease)) -}}
+#!/usr/bin/env bash
+
+flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install --noninteractive --user {{- range .packages.flatpak }} {{ . }}{{ end }}
+
+flatpak update --noninteractive --user
+
+flatpak uninstall --noninteractive --unused --user
+{{ end }}

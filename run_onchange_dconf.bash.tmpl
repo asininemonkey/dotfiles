@@ -1,0 +1,10 @@
+{{ if not (eq (env "TERM") "linux") -}}
+#!/usr/bin/env bash
+
+# {{ include "dot_config/dconf/dconf.ini" | sha256sum }}
+
+if type dconf &> /dev/null
+then
+    dconf load / < {{ joinPath .chezmoi.sourceDir "dot_config/dconf/dconf.ini" | quote }}
+fi
+{{ end }}

@@ -1,0 +1,11 @@
+---
+services:
+  arch:
+    gui:
+      system:
+        - sddm
+      user:
+    system:
+      - docker
+      - sshd
+    user:

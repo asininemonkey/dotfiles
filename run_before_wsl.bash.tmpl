@@ -1,0 +1,20 @@
+{{ if contains "WSL2" .chezmoi.kernel.osrelease -}}
+#!/usr/bin/env bash
+
+set -eu
+
+if ! grep {{ .user.name.short }} /etc/wsl.conf &> /dev/null
+then
+cat << EOF | sudo tee /etc/wsl.conf > /dev/null
+[boot]
+systemd=true
+[user]
+default={{ .user.name.short }}
+EOF
+fi
+
+if [ ! -f /usr/lib/binfmt.d/WSLInterop.conf ]
+then
+    echo ':WSLInterop:M::MZ::/init:PF' | sudo tee /usr/lib/binfmt.d/WSLInterop.conf > /dev/null
+fi
+{{ end }}

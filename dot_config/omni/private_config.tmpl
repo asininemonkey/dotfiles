@@ -1,0 +1,7 @@
+context: default
+contexts:
+  default:
+    auth:
+      siderov1:
+        identity: siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
+    url: https://{{ lower .user.name.first }}-{{ lower .user.name.last }}.eu-central-1.omni.siderolabs.io

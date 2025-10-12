@@ -1,0 +1,30 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (eq .chezmoi.hostname "asrock-x570-linux") -}}
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! -f /etc/mkinitcpio.conf.d/nvidia.conf ]
+then
+    echo 'MODULES=(nvidia nvidia_drm nvidia_modeset nvidia_uvm)' | sudo tee /etc/mkinitcpio.conf.d/nvidia.conf > /dev/null
+fi
+
+if [ ! -f /etc/pacman.d/hooks/nvidia.hook ]
+then
+    sudo mkdir --parents /etc/pacman.d/hooks
+
+cat << EOF | sudo tee /etc/pacman.d/hooks/nvidia.hook > /dev/null
+[Action]
+Depends=mkinitcpio
+Description=Updating NVIDIA module dependencies...
+Exec=/usr/bin/mkinitcpio --allpresets
+When=PostTransaction
+
+[Trigger]
+Operation=Install
+Operation=Remove
+Operation=Upgrade
+Target=nvidia-open
+Type=Package
+EOF
+fi
+{{ end }}

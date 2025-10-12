@@ -1,0 +1,68 @@
+# kubectl exec --namespace {{ .user.name.short }} --stdin --tty archlinux -- /bin/bash
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    name: {{ .user.name.short }}
+  name: {{ .user.name.short }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    name: {{ .user.name.short }}
+  name: archlinux
+  namespace: {{ .user.name.short }}
+data:
+  bootstrap.bash: |
+    #!/usr/bin/env bash
+
+    set -ex
+
+    pacman-key --init
+    pacman-key --populate
+
+    pacman --needed --noconfirm --refresh --sync base-devel chezmoi git jq sudo zsh
+
+    groupadd --gid 1000 {{ .user.name.short }}
+
+    useradd --create-home --gid 1000 --groups wheel --shell /bin/zsh --uid 1000 {{ .user.name.short }}
+
+    echo -n 'password' | passwd --stdin {{ .user.name.short }}
+
+    YAY_RELEASE=$(curl --location --silent https://api.github.com/repos/jguer/yay/releases/latest | jq --raw-output '.tag_name | sub("v"; "")')
+
+    curl --location --silent https://github.com/Jguer/yay/releases/download/v${YAY_RELEASE}/yay_${YAY_RELEASE}_x86_64.tar.gz | tar --directory /tmp --extract --gzip --no-anchored --strip-components 1 --wildcards yay
+
+    echo '{{ .user.name.short }} ALL=(ALL:ALL) NOPASSWD: ALL' > /etc/sudoers.d/00_{{ .user.name.short }}
+
+    sudo --user {{ .user.name.short }} /tmp/yay --noconfirm --sync yay-bin
+
+    sed --in-place 's/NOPASSWD: //' /etc/sudoers.d/00_{{ .user.name.short }}
+
+    sleep 604800
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    name: {{ .user.name.short }}
+  name: archlinux
+  namespace: {{ .user.name.short }}
+spec:
+  containers:
+    - command:
+        - /bootstrap.bash
+      image: archlinux
+      imagePullPolicy: Always
+      name: archlinux
+      volumeMounts:
+        - mountPath: /bootstrap.bash
+          name: archlinux
+          subPath: bootstrap.bash
+  volumes:
+    - configMap:
+        defaultMode: 0555
+        name: archlinux
+      name: archlinux

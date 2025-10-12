@@ -1,0 +1,5 @@
+.bash*
+.lesshst
+.profile
+.sudo_as_admin_successful
+.wget-hsts

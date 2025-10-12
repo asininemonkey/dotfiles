@@ -1,0 +1,3 @@
+{{- if not (contains "WSL2" .chezmoi.kernel.osrelease) -}}
+{{ .user.ssh.secondary }}
+{{- end }}

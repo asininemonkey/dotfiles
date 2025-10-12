@@ -1,0 +1,15 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/usr/bin/env bash
+{{- if and (.services.arch.gui.system) (not (contains "WSL2" .chezmoi.kernel.osrelease)) }}
+sudo systemctl enable {{- range .services.arch.gui.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if and (.services.arch.gui.user) (not (contains "WSL2" .chezmoi.kernel.osrelease)) }}
+sudo systemctl enable {{- range .services.arch.gui.user }} {{ . }}{{ end }}
+{{- end }}
+{{- if .services.arch.system }}
+sudo systemctl enable {{- range .services.arch.system }} {{ . }}{{ end }}
+{{- end }}
+{{- if .services.arch.user }}
+systemctl --user enable {{- range .services.arch.user }} {{ . }}{{ end }}
+{{- end }}
+{{ end }}
