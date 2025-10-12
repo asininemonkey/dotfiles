@@ -2,13 +2,16 @@
     gpgsign = true
 
 [core]
-    editor = "zeditor --wait"
+    editor = zeditor --wait
 
 [gpg]
     format = ssh
 
 [gpg "ssh"]
     allowedSignersFile = ~/.config/git/allowed_signers
+
+[url "ssh://git@github.com"]
+    insteadOf = https://github.com
 
 [user]
     email = 65740649+asininemonkey@users.noreply.github.com
