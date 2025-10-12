@@ -1,0 +1,34 @@
+{
+  "auto_install_extensions": {
+    "docker-compose": true,
+    "dockerfile": true,
+    "env": true,
+    "git-firefly": true,
+    "helm": true,
+    "kdl": true,
+    "make": true,
+    "nix": true,
+    "scss": true,
+    "sql": true,
+    "terraform": true,
+    "toml": true
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "line_height": "standard"
+  },
+  "theme": {
+    "dark": "Ayu Dark",
+    "light": "Ayu Light",
+    "mode": "dark"
+  }
+}
