@@ -19,6 +19,7 @@ packages:
       - ghostty
       - git
       - k9s
+      - libfido2
       - noto-fonts # dependency: firefox
       - signal-desktop
       - tree
