@@ -12,6 +12,7 @@ packages:
       - age
       - btop
       - chezmoi
+      - cyme
       - docker
       - fastfetch
       - firefox-i18n-en-gb

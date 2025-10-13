@@ -1,0 +1,7 @@
+services:
+  arch:
+    system:
+      - docker
+      - greetd
+      - sshd
+    user:

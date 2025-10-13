@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/usr/bin/env bash
+
+{{ if .services.arch.system -}}
+sudo systemctl enable {{- range .services.arch.system }} {{ . }}{{ end }}
+{{- end }}
+
+{{ if .services.arch.user -}}
+systemctl --user enable {{- range .services.arch.user }} {{ . }}{{ end }}
+{{- end }}
+{{ end }}
