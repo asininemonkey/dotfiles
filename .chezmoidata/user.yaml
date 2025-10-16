@@ -4,5 +4,6 @@ user:
     full: Jose Cardoso
     short: jcardoso
   ssh:
-    primary: sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIFPfRO7+E4swzPLmt6riAs00uK3W4ZWtLbEUKwroHpkWAAAABHNzaDo=
-    secondary: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQowLl5Bzn87ig+Gs7Ze5kWODRTdHiD+V8sOCwOx16Z
+    primary: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIQowLl5Bzn87ig+Gs7Ze5kWODRTdHiD+V8sOCwOx16Z
+    secondary: sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIPIsc/5PSkY+efsTdkNqKSN+iWMTMwcQn539+6njmVp4AAAADHNzaDoyMDI1MTAxNg==
+    tertiary: sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIIx7l8wq74BX/qyd6woeA1Oml/eAAJkOzr+zvIbKqoRKAAAADHNzaDoyMDI1MTAxNg==
