@@ -8,4 +8,5 @@ services:
     system:
       - docker
       - sshd
+      - tailscaled
     user:
