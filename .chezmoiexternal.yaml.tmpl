@@ -41,6 +41,13 @@
   type: file
   url: https://github.com/siderolabs/talos/releases/download/v1.11.6/talosctl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
 
+.local/bin/tetra:
+  checksum.sha256: c6e901717f738e301adb856ba5695f4531eeaea1baab023e1d5463939c94d344
+  executable: true
+  path: tetra
+  type: archive-file
+  url: https://github.com/cilium/tetragon/releases/download/v1.6.0/tetra-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+
 .local/share/zinit/zinit.git:
   type: git-repo
   url: https://github.com/zdharma-continuum/zinit.git

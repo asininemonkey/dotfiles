@@ -22,6 +22,12 @@ data:
     refresh: 60.000
     scale: 1.33
     width: 1152
+    {{- else -}}
+    height: xxx
+    output: xxx
+    refresh: xxx
+    scale: xxx
+    width: xxx
     {{- end }}
   external:
     {{ output "lscpu" "--json" }}
