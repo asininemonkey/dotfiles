@@ -10,7 +10,6 @@ packages:
     core:
       - ldns
       - man-db
-      - nano
       - openssh
     extra:
       - age
