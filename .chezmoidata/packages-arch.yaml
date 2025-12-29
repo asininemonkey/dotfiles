@@ -4,6 +4,7 @@ packages:
     aur:
       - 1password-cli
       - amazon-ecr-credential-helper
+      - fresh-editor
       - kubelogin
       - terramate
     core:
