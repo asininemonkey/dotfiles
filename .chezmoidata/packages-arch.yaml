@@ -46,7 +46,6 @@ packages:
         - oha
         - opentofu
         - popeye
-        - qemu-desktop
         - scrcpy
         - speedtest-cli
         - swtpm
@@ -57,10 +56,6 @@ packages:
         - trivy
         - unzip
         - virglrenderer
-        - vlc
-        - vlc-plugin-ffmpeg
-        - vlc-plugin-x264
-        - vlc-plugin-x265
         - vulkan-tools
         - wget
         - xdg-utils
@@ -89,12 +84,17 @@ packages:
         - papirus-icon-theme
         - pavucontrol
         - polymath
+        - qemu-desktop
         - seahorse
         - signal-desktop
         - swayidle
         - swaylock
         - swww
         - ttf-iosevkaterm-nerd
+        - vlc
+        - vlc-plugin-ffmpeg
+        - vlc-plugin-x264
+        - vlc-plugin-x265
         - waybar
         - wayland-utils
         - wl-clipboard
