@@ -3,13 +3,23 @@
     gpgsign = true
 
 [core]
-    {{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
-    editor = zeditor --wait
+    {{- if contains "WSL2" .chezmoi.kernel.osrelease }}
+    editor = code --wait
     {{- else }}
-    editor = nano
+    editor = zeditor --wait
     {{- end }}
     {{- if contains "WSL2" .chezmoi.kernel.osrelease }}
     sshCommand = "/mnt/c/Windows/System32/OpenSSH/ssh.exe"
+    {{- end }}
+
+[diff]
+    tool = difftool
+
+[difftool "difftool"]
+    {{- if contains "WSL2" .chezmoi.kernel.osrelease }}
+    cmd = code --wait --diff $LOCAL $REMOTE
+    {{- else }}
+    cmd = zeditor --wait --diff $LOCAL $REMOTE
     {{- end }}
 
 [fetch]
@@ -24,6 +34,16 @@
     program = "/mnt/c/Users/{{ .user.name.long }}/AppData/Local/Microsoft/WindowsApps/op-ssh-sign-wsl.exe"
     {{- else }}
     program = /opt/1Password/op-ssh-sign
+    {{- end }}
+
+[merge]
+    tool = mergetool
+
+[mergetool "mergetool"]
+    {{- if contains "WSL2" .chezmoi.kernel.osrelease }}
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE
+    {{- else }}
+    cmd = zeditor --wait --merge $REMOTE $LOCAL $BASE
     {{- end }}
 
 [pull]
