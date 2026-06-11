@@ -41,9 +41,9 @@
 
 [mergetool "mergetool"]
     {{- if contains "WSL2" .chezmoi.kernel.osrelease }}
-    cmd = code --wait --merge $REMOTE $LOCAL $BASE
+    cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
     {{- else }}
-    cmd = zeditor --wait --merge $REMOTE $LOCAL $BASE
+    cmd = zeditor --wait --merge $REMOTE $LOCAL $BASE $MERGED
     {{- end }}
 
 [pull]
