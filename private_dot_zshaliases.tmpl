@@ -1,5 +1,6 @@
 alias asl='aws sso login'
 alias ca='chezmoi apply --force --init'
+alias clean='yay --deps --query --quiet --unrequired | yay --nosave --recursive --remove -'
 alias cu='chezmoi update --force --init'
 alias dig='drill'
 alias dsc='docker stop $(docker ps --quiet)'
