@@ -9,6 +9,5 @@ packages:
     - io.github.flattool.Warehouse
     - io.github.kolunmi.Bazaar
     - io.kinvolk.Headlamp
-    - me.amankhanna.opendeck
   geforcenow:
     - com.nvidia.geforcenow
