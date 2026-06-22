@@ -1,4 +1,11 @@
 {
+  "agent": {
+    "default_model": {
+      "enable_thinking": true,
+      "model": "digitsflow/bonsai-8b:latest",
+      "provider": "ollama"
+    }
+  },
   "auto_install_extensions": {
     "dockerfile": true,
     "editorconfig": true,
@@ -20,6 +27,9 @@
   },
   "minimap": {
     "show": "always"
+  },
+  "project_panel": {
+    "dock": "left"
   },
   "telemetry": {
     "diagnostics": false,
