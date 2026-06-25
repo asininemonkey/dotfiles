@@ -1,3 +1,5 @@
+# https://kubernetes.io/docs/reference/config-api/kubeconfig.v1/
+---
 apiVersion: v1
 clusters:
   - cluster:
@@ -6,11 +8,11 @@ clusters:
 contexts:
   - context:
       cluster: home-tailscale
-      user: tailscale-auth
-    name: k8s-operator.fable-blues.ts.net
-current-context: k8s-operator.fable-blues.ts.net
+      user: home-tailscale
+    name: home-tailscale
+current-context: home-tailscale
 kind: Config
 users:
-  - name: tailscale-auth
+  - name: home-tailscale
     user:
       token: unused

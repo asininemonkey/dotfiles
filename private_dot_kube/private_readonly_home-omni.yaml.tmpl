@@ -1,3 +1,5 @@
+# https://kubernetes.io/docs/reference/config-api/kubeconfig.v1/
+---
 apiVersion: v1
 kind: Config
 clusters:
@@ -7,11 +9,11 @@ clusters:
 contexts:
   - context:
       cluster: home-omni
-      user: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home-siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
-    name: {{ lower .user.name.first }}-{{ lower .user.name.last }}.kubernetes.eu-central-1.omni.siderolabs.io
-current-context: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home
+      user: home-omni
+    name: home-omni
+current-context: home-omni
 users:
-  - name: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home-siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
+  - name: home-omni
     user:
       exec:
         apiVersion: client.authentication.k8s.io/v1beta1
