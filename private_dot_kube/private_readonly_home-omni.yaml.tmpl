@@ -3,13 +3,12 @@ kind: Config
 clusters:
   - cluster:
       server: https://{{ lower .user.name.first }}-{{ lower .user.name.last }}.kubernetes.eu-central-1.omni.siderolabs.io
-    name: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home
+    name: home-omni
 contexts:
   - context:
-      cluster: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home
-      namespace: default
+      cluster: home-omni
       user: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home-siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
-    name: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home
+    name: {{ lower .user.name.first }}-{{ lower .user.name.last }}.kubernetes.eu-central-1.omni.siderolabs.io
 current-context: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home
 users:
   - name: {{ lower .user.name.first }}-{{ lower .user.name.last }}-home-siderolabs.com@{{ lower .user.name.first }}{{ lower .user.name.last }}.com
