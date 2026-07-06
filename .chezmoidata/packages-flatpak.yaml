@@ -4,6 +4,7 @@ packages:
     - com.cassidyjames.butler
     - com.github.tchx84.Flatseal
     - com.jeffser.Alpaca
+    - com.moonlight_stream.Moonlight
     - com.notesnook.Notesnook
     - com.usebottles.bottles
     - io.github.flattool.Warehouse
