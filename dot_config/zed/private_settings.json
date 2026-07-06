@@ -2,7 +2,7 @@
   "agent": {
     "default_model": {
       "enable_thinking": true,
-      "model": "digitsflow/bonsai-8b:latest",
+      "model": "digitsflow/bonsai-8b",
       "provider": "ollama"
     }
   },
@@ -18,12 +18,21 @@
     "nix": true,
     "scss": true,
     "sql": true,
-    "terraform": true,
+    "terraform": true,  "language_models": {
+      "ollama": {
+        "api_url": "http://127.0.0.1:11434"
+      }
+    },
     "toml": true
   },
   "colorize_brackets": true,
   "git_panel": {
     "dock": "right"
+  },
+  "language_models": {
+    "ollama": {
+      "api_url": "http://127.0.0.1:11434"
+    }
   },
   "minimap": {
     "show": "always"
