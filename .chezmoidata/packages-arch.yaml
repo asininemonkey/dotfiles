@@ -20,6 +20,7 @@ packages:
         - dive
         - docker
         - docker-buildx
+        - doxygen
         - eza
         - fastfetch
         - git

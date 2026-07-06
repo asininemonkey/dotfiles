@@ -18,11 +18,7 @@
     "nix": true,
     "scss": true,
     "sql": true,
-    "terraform": true,  "language_models": {
-      "ollama": {
-        "api_url": "http://127.0.0.1:11434"
-      }
-    },
+    "terraform": true,
     "toml": true
   },
   "colorize_brackets": true,
