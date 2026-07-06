@@ -4,7 +4,7 @@
 set -eu
 
 # Stop Random Display Flicker
-if ! grep dcdebugmask /boot/EFI/arch-limine/limine.conf &> /dev/null
+if ! sudo grep dcdebugmask /boot/EFI/arch-limine/limine.conf &> /dev/null
 then
     sudo sed --in-place '/cmdline/ s/$/ amdgpu.dcdebugmask=0x410/' /boot/EFI/arch-limine/limine.conf
 fi
