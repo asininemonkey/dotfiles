@@ -1,0 +1,6 @@
+{
+  "defaultModel": "digitsflow/bonsai-8b",
+  "defaultProvider": "ollama",
+  "lastChangelogVersion": "0.80.3",
+  "theme": "dark"
+}

@@ -1,0 +1,14 @@
+{
+  "providers": {
+    "ollama": {
+      "api": "openai-completions",
+      "apiKey": "ollama",
+      "baseUrl": "http://127.0.0.1:11434/v1",
+      "models": [
+        {
+          "id": "digitsflow/bonsai-8b"
+        }
+      ]
+    }
+  }
+}
