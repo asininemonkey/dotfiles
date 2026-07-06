@@ -33,6 +33,7 @@ packages:
         - lazygit
         - libfido2
         - libiscsi
+        - lynis
         - mesa-utils
         - noto-fonts
         - nvme-cli
