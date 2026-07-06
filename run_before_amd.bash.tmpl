@@ -3,6 +3,11 @@
 
 set -eu
 
+if ! grep dcdebugmask /boot/EFI/arch-limine/limine.conf &> /dev/null
+then
+    sudo sed --in-place '/cmdline/ s/$/ amdgpu.dcdebugmask=0x410/' /boot/EFI/arch-limine/limine.conf
+fi
+
 if [ ! -f /etc/mkinitcpio.conf.d/amd.conf ]
 then
     echo 'MODULES=(amdgpu)' | sudo tee /etc/mkinitcpio.conf.d/amd.conf > /dev/null
