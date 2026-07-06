@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.hostname "asrock-x570-linux" }}
 monitor.alsa.rules = [
     {
         actions = {
@@ -13,3 +14,4 @@ monitor.alsa.rules = [
         ]
     }
 ]
+{{- end }}
