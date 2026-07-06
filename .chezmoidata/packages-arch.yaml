@@ -5,15 +5,6 @@ packages:
       extra:
         - ollama-rocm
     common:
-      aur:
-        - 1password-cli
-        - amazon-ecr-credential-helper
-        - edk2-ovmf-fedora
-        - fresh-editor-bin
-        - grype-bin
-        - kubelogin
-        - pi-bin
-        - terramate
       core:
         - ldns
         - man-db
@@ -62,11 +53,6 @@ packages:
         - xdg-utils
         - zsh
     gui:
-      aur:
-        - 1password
-        - localsend
-        - phinger-cursors
-        - waypaper
       extra:
         - cosmic-greeter
         - firefox-i18n-en-gb
@@ -84,7 +70,6 @@ packages:
         - nm-connection-editor
         - papirus-icon-theme
         - pavucontrol
-        - polymath
         - qemu-desktop
         - seahorse
         - signal-desktop

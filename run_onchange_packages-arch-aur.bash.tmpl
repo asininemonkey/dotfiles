@@ -1,0 +1,11 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/usr/bin/env bash
+
+yay --noconfirm --refresh
+
+yay --needed --noconfirm --sync {{- range .packages.arch.aur.common }} {{ . }}{{ end }}
+
+{{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
+yay --needed --noconfirm --sync {{- range .packages.arch.aur.gui }} {{ . }}{{ end }}
+{{- end }}
+{{ end }}

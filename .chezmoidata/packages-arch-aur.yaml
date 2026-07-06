@@ -1,0 +1,19 @@
+---
+packages:
+  arch:
+    aur:
+      common:
+        - 1password-cli
+        - amazon-ecr-credential-helper
+        - edk2-ovmf-fedora
+        - fresh-editor
+        - grype-bin
+        - kubelogin
+        - pi-bin
+        - terramate
+      gui:
+        - 1password
+        - localsend
+        - phinger-cursors
+        - polymath
+        - waypaper

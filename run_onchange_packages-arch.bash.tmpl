@@ -1,24 +1,20 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/usr/bin/env bash
 
-yay --noconfirm --refresh
+sudo pacman --noconfirm --refresh
 
-yay --needed --noconfirm --sync {{- range .packages.arch.common.aur }} {{ . }}{{ end }}
-yay --needed --noconfirm --sync {{- range .packages.arch.common.core }} {{ . }}{{ end }}
-yay --needed --noconfirm --sync {{- range .packages.arch.common.extra }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.common.core }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.common.extra }} {{ . }}{{ end }}
 
 {{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
-yay --needed --noconfirm --sync {{- range .packages.arch.gui.aur }} {{ . }}{{ end }}
-yay --needed --noconfirm --sync {{- range .packages.arch.gui.extra }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.gui.extra }} {{ . }}{{ end }}
 {{- end }}
 
 {{- if eq .chezmoi.hostname "asrock-x570-linux" }}
-yay --needed --noconfirm --sync {{- range .packages.arch.nvidia.extra }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.nvidia.extra }} {{ . }}{{ end }}
 {{- end }}
 
 {{- if eq .chezmoi.hostname "asus-zenbook" }}
-yay --needed --noconfirm --sync {{- range .packages.arch.amd.extra }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.amd.extra }} {{ . }}{{ end }}
 {{- end }}
-
-yay --clean --noconfirm --sync
 {{ end }}
