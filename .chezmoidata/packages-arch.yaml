@@ -55,6 +55,7 @@ packages:
         - zsh
     gui:
       extra:
+        - awww
         - cosmic-greeter
         - firefox-i18n-en-gb
         - flatpak
@@ -76,7 +77,6 @@ packages:
         - signal-desktop
         - swayidle
         - swaylock
-        - swww
         - ttf-iosevkaterm-nerd
         - vlc
         - vlc-plugin-ffmpeg
