@@ -1,62 +1,62 @@
 ---
 .local/bin:
   checksum:
-    sha256: "bb2477cfaeaaafb2bb23a9984a37172b9330c965b41746ac80dc49a2db3ace30"
+    sha256: "a666f278ba26bc5b4a6aad8a5a5e4904a3762d3aab2e824db358abb30cb3632e"
   refreshPeriod: 168h
   stripComponents: 1
   type: archive
-  url: https://github.com/localstack/localstack-cli/releases/download/v2026.3.0/localstack-cli-2026.3.0-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+  url: https://github.com/localstack/localstack-cli/releases/download/v2026.6.0/localstack-cli-2026.6.0-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
 
 .local/bin/cilium:
   checksum:
-    sha256: "aa25cd2542614051573008ed18adb7d697fd78e4b0345db83d1650cdaf4492de"
+    sha256: "67e59489b7ad17dea8eb8cc930435105dff3a4575643ad62567fb2c5ae80d246"
   executable: true
   path: cilium
   refreshPeriod: 168h
   type: archive-file
-  url: https://github.com/cilium/cilium-cli/releases/download/v0.19.2/cilium-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+  url: https://github.com/cilium/cilium-cli/releases/download/v0.19.5/cilium-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
 
 .local/bin/hubble:
   checksum:
-    sha256: "93080f029b96ddf9c3513dc74b15b578190e206410f8f596ae404474f2ff2168"
+    sha256: "c7c37a5f27ed2ae2d5495c6ddbecc61cebbb841508e77af3c131e96f005ed247"
   executable: true
   path: hubble
   refreshPeriod: 168h
   type: archive-file
-  url: https://github.com/cilium/hubble/releases/download/v1.18.6/hubble-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+  url: https://github.com/cilium/hubble/releases/download/v1.19.4/hubble-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
 
 .local/bin/oh-my-posh:
   checksum:
-    sha256: "db2bb4e35384aff2014c79eec8e81c407656952f7c74d7df84f8b2658286dd14"
+    sha256: "d89c847c0418c946d37eb6c3eb1bfbd2b8f5b0e715c4719915f421f237213898"
   executable: true
   refreshPeriod: 168h
   type: file
-  url: https://github.com/jandedobbeleer/oh-my-posh/releases/download/v29.10.0/posh-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+  url: https://github.com/jandedobbeleer/oh-my-posh/releases/download/v29.21.0/posh-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
 
 .local/bin/omnictl:
   checksum:
-    sha256: "df26f96d803ce32117dd54b5e1cd02c14639089960e31022b15548ef06dba5a1"
+    sha256: "66c7a844c45e01fa5933f8b9db56c19d23eca65db441d56d0312316e683bb8e2"
   executable: true
   refreshPeriod: 168h
   type: file
-  url: https://github.com/siderolabs/omni/releases/download/v1.6.5/omnictl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+  url: https://github.com/siderolabs/omni/releases/download/v1.9.1/omnictl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
 
 .local/bin/talosctl:
   checksum:
-    sha256: "4c41a3b10b075292e64b182283d558e9d8e935f43239de1ed4e4b14359593efb"
+    sha256: "cb12209727c0c4d57d74c0595f34d441ba491421e1d3c8a5142ed91028a20232"
   executable: true
   refreshPeriod: 168h
   type: file
-  url: https://github.com/siderolabs/talos/releases/download/v1.12.6/talosctl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
+  url: https://github.com/siderolabs/talos/releases/download/v1.13.5/talosctl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
 
 .local/bin/tetra:
   checksum:
-    sha256: "3f7dc993fb4617146fcfb70a55d22cc7c54deb950109060396b0e44df49c224e"
+    sha256: "a765f8f4980accc02b9b69d41c8547a011c3674ffeb1c84321e46f0c712858d9"
   executable: true
   path: tetra
   refreshPeriod: 168h
   type: archive-file
-  url: https://github.com/cilium/tetragon/releases/download/v1.6.1/tetra-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
+  url: https://github.com/cilium/tetragon/releases/download/v1.7.0/tetra-{{ .chezmoi.os }}-{{ .chezmoi.arch }}.tar.gz
 
 .local/share/zinit/zinit.git:
   refreshPeriod: 168h
