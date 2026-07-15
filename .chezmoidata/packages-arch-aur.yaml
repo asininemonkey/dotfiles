@@ -9,7 +9,7 @@ packages:
         - fresh-editor
         - grype-bin
         - kubelogin
-        - pi-bin
+        - pi
         - terramate
       gui:
         - 1password
