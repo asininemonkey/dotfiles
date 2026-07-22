@@ -41,6 +41,15 @@
   type: file
   url: https://github.com/siderolabs/omni/releases/download/v1.9.1/omnictl-{{ .chezmoi.os }}-{{ .chezmoi.arch }}
 
+.local/bin/port:
+  checksum:
+    sha256: "9d6a011ea3330b4b1540858a7219b117671098197aa9c72a5b64771f5c1ed5cf"
+  executable: true
+  path: port
+  refreshPeriod: 168h
+  type: archive-file
+  url: https://github.com/port-experimental/port-cli/releases/download/v0.3.9/port-cli_0.3.9_{{ .chezmoi.os }}_{{ .chezmoi.arch }}.tar.gz
+
 .local/bin/talosctl:
   checksum:
     sha256: "cb12209727c0c4d57d74c0595f34d441ba491421e1d3c8a5142ed91028a20232"
