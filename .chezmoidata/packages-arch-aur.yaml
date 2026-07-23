@@ -10,6 +10,7 @@ packages:
         - grype-bin
         - kubelogin
         - pi
+        - superfile
         - terramate
       gui:
         - 1password
