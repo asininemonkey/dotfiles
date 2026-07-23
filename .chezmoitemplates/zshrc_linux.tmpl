@@ -8,13 +8,26 @@ fi
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
-## Oh My Zsh Libraries
-zinit snippet OMZL::history.zsh
+## Oh My Zsh Libraries - https://github.com/ohmyzsh/ohmyzsh/tree/master/lib
+for LIBRARY in \
+    history.zsh
+do
+    zinit snippet "OMZL::${LIBRARY}"
+done
 
-## Oh My Zsh Plugins
-zinit snippet OMZP::git
-zinit snippet OMZP::kubectl
-zinit snippet OMZP::terraform
+## Oh My Zsh Plugins - https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins
+for PLUGIN in \
+    aws \
+    chezmoi \
+    git \
+    helm \
+    k9s \
+    kubectl \
+    ngrok \
+    terraform
+do
+    zinit snippet "OMZP::${PLUGIN}"
+done
 
 # compinit
 autoload -Uz compinit
