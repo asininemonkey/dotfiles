@@ -56,11 +56,9 @@ packages:
         - zsh
     gui:
       extra:
-        - awww
         - cosmic-greeter
         - firefox-i18n-en-gb
         - flatpak
-        - fuzzel
         - ghostty
         - ghostty-nautilus
         - gnome-keyring
@@ -69,26 +67,30 @@ packages:
         - gvfs-smb
         - mako
         - nautilus
-        - niri
         - nm-connection-editor
         - papirus-icon-theme
         - pavucontrol
         - qemu-desktop
         - seahorse
         - signal-desktop
-        - swayidle
-        - swaylock
         - ttf-iosevkaterm-nerd
         - vlc
         - vlc-plugin-ffmpeg
         - vlc-plugin-x264
         - vlc-plugin-x265
-        - waybar
         - wayland-utils
         - wl-clipboard
+        - zed
+    niri:
+      extra:
+        - awww
+        - fuzzel
+        - niri
+        - swayidle
+        - swaylock
+        - waybar
         - xdg-desktop-portal-gnome
         - xwayland-satellite
-        - zed
     nvidia:
       extra:
         - ollama-cuda
