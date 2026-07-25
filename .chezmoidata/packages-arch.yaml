@@ -81,6 +81,13 @@ packages:
         - wayland-utils
         - wl-clipboard
         - zed
+    hyprland:
+      extra:
+        - hypridle
+        - hyprland
+        - hyprlock
+        - hyprpolkitagent
+        - xdg-desktop-portal-hyprland
     niri:
       extra:
         - awww

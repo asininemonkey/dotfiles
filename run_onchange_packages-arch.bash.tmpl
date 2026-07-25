@@ -8,6 +8,7 @@ sudo pacman --needed --noconfirm --sync {{- range .packages.arch.common.extra }}
 
 {{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.gui.extra }} {{ . }}{{ end }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.hyprland.extra }} {{ . }}{{ end }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.niri.extra }} {{ . }}{{ end }}
 {{- end }}
 
