@@ -6,15 +6,15 @@ packages:
         - 1password-cli
         - amazon-ecr-credential-helper
         - edk2-ovmf-fedora
-        - fresh-editor
+        - fresh-editor-bin
         - grype-bin
-        - kubelogin
-        - pi
+        - kubelogin-bin
+        - pi-bin
         - superfile
-        - terramate
+        - terramate-bin # Outdated
       gui:
         - 1password
-        - localsend
+        - localsend-bin
         - phinger-cursors
         - polymath
         - waypaper
