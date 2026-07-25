@@ -85,8 +85,11 @@ packages:
       extra:
         - hypridle
         - hyprland
+        - hyprlauncher
         - hyprlock
         - hyprpolkitagent
+        - hyprpwcenter
+        - hyprshutdown
         - xdg-desktop-portal-hyprland
     niri:
       extra:
