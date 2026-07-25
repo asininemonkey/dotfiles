@@ -1,3 +1,4 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (not (contains "WSL2" .chezmoi.kernel.osrelease)) -}}
 #!/usr/bin/env bash
 
 set -eu
@@ -15,3 +16,4 @@ service = "login"
 [terminal]
 vt = "1"
 EOF
+{{ end }}
