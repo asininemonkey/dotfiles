@@ -59,6 +59,7 @@ packages:
         - cosmic-greeter
         - firefox-i18n-en-gb
         - flatpak
+        - gamescope
         - ghostty
         - ghostty-nautilus
         - gnome-keyring
