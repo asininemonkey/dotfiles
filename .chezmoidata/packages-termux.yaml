@@ -1,0 +1,7 @@
+---
+packages:
+  termux:
+    - helm
+    - k9s
+    - kubectl
+
