@@ -25,6 +25,7 @@ packages:
         - fastfetch
         - git
         - helm
+        - hcloud
         - inxi
         - jq
         - k9s
