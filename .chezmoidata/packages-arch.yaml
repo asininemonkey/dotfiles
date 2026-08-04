@@ -24,8 +24,8 @@ packages:
         - eza
         - fastfetch
         - git
-        - helm
         - hcloud
+        - helm
         - inxi
         - jq
         - k9s
