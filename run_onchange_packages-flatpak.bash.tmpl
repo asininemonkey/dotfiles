@@ -7,7 +7,7 @@ flatpak remote-add --if-not-exists --user geforcenow https://international.downl
 flatpak install --noninteractive --user {{- range .packages.flatpak }} {{ . }}{{ end }}
 flatpak install --noninteractive --user {{- range .packages.geforcenow }} {{ . }}{{ end }}
 
-flatpak update --noninteractive --user
+flatpak update --no-static-deltas --noninteractive --user
 
 flatpak uninstall --noninteractive --unused --user
 
