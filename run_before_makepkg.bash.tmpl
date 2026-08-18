@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -eu
+
+if [ ! -f /etc/makepkg.conf.d/debug.conf ]
+then
+    echo 'OPTIONS=(!debug)' | sudo tee /etc/makepkg.conf.d/debug.conf > /dev/null
+fi
