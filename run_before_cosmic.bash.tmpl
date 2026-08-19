@@ -1,0 +1,7 @@
+{{ if and (eq .chezmoi.osRelease.id "arch") (not (contains "WSL2" .chezmoi.kernel.osrelease)) -}}
+#!/usr/bin/env bash
+
+set -eu
+
+cat /home/{{ .user.name.short }}/.local/state/cosmic-comp/outputs.ron | sudo tee /var/lib/cosmic-greeter/.local/state/cosmic-comp/outputs.ron > /dev/null
+{{ end }}

@@ -1,0 +1,21 @@
+(
+    config: {
+        [
+            (
+                connector: "{{ .display.output }}",
+                make: "{{ .display.make }}",
+                model: "{{ .display.model }}",
+            ),
+        ]: [
+            (
+                mode: (({{ .display.width }}, {{ .display.height }}), Some({{ toString .display.refresh | replaceAllRegex "\\." "" }})),
+                vrr: r#true,
+                scale: {{ .display.scale }},
+                transform: Normal,
+                position: (0, 0),
+                enabled: r#true,
+                xwayland_primary: true,
+            ),
+        ],
+    },
+)
