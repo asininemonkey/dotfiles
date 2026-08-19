@@ -12,5 +12,5 @@ flatpak update --no-static-deltas --noninteractive --user
 flatpak uninstall --noninteractive --unused --user
 
 # Patches
-sed --in-place 's/"tvMode": false/"tvMode": true/' "$(find ${HOME}/.local/share/flatpak/app/com.nvidia.geforcenow -name config.json -type f)"
+# sed --in-place 's/"tvMode": false/"tvMode": true/' "$(find ${HOME}/.local/share/flatpak/app/com.nvidia.geforcenow -name config.json -type f)"
 {{ end }}
