@@ -1,0 +1,5 @@
+[Default Applications]
+application/x-terminal-emulator=com.mitchellh.ghostty.desktop
+application/x-zerosize=dev.zed.Zed.desktop
+text/plain=dev.zed.Zed.desktop
+x-scheme-handler/terminal=com.mitchellh.ghostty.desktop
