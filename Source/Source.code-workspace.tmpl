@@ -2,7 +2,7 @@
 	"extensions": {
 		"recommendations": [
 			"editorconfig.editorconfig",
-		    "github.vscode-github-actions",
+			"github.vscode-github-actions",
 			"hashicorp.terraform",
 			"jinliming2.vscode-go-template",
 			"redhat.vscode-yaml",
@@ -22,8 +22,9 @@
 		"git.autofetch": "all",
 		"git.confirmSync": false,
 		"go-template.patterns": ["**/*.tmpl"],
+		"ollama.endpoint": "{{ if contains "WSL2" .chezmoi.kernel.osrelease -}}http://jose-desktop-windows:11434{{- end }}",
 		"redhat.telemetry.enabled": false,
-        "scm.repositories.visible": 0,
+		"scm.repositories.visible": 0,
 		"telemetry.editStats.enabled": false,
 		"telemetry.feedback.enabled": false,
 		"terminal.integrated.allowChords": false,

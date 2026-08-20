@@ -4,7 +4,7 @@ export EDITOR="fresh"
 export EXA_ICON_SPACING=2
 export HISTFILE="${HOME}/.zshhistory"
 export HISTSIZE=10000
-export KUBECONFIG="${HOME}/.kube/home.yaml"
+export KUBECONFIG="${HOME}/.kube/home-omni.yaml"
 export LOCALSTACK_ACKNOWLEDGE_ACCOUNT_REQUIREMENT="true"
 export OMNICONFIG="${HOME}/.config/omni/config"
 export PATH=${PATH}:${HOME}/.local/bin
@@ -14,4 +14,5 @@ export TALOSCONFIG="${HOME}/.config/talos/config"
 {{- if and (contains "WSL2" .chezmoi.kernel.osrelease) (eq .chezmoi.osRelease.id "arch") }}
 export GALLIUM_DRIVER=d3d12
 export LIBVA_DRIVER_NAME=d3d12
+export OLLAMA_HOST={{ if contains "WSL2" .chezmoi.kernel.osrelease -}}http://jose-desktop-windows:11434{{- end }}
 {{- end }}
