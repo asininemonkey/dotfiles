@@ -11,7 +11,7 @@ packages:
         - kubelogin-bin
         - pi-bin
         - superfile
-        - terramate-bin # Outdated
+        - terramate-bin
       gui:
         - 1password
         - localsend-bin
