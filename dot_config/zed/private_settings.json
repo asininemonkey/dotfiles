@@ -1,9 +1,10 @@
 {
+  // https://github.com/zed-industries/zed/blob/main/docs/src/reference/all-settings.md
   "agent": {
     "default_model": {
       "enable_thinking": true,
-      "model": "digitsflow/bonsai-8b",
-      "provider": "ollama"
+      "provider": "ollama",
+      "model": "qwen3.5:9b"
     }
   },
   "auto_install_extensions": {
@@ -21,13 +22,23 @@
     "terraform": true,
     "toml": true
   },
+  "buffer_font_size": 16,
   "colorize_brackets": true,
+  "context_servers": {
+    "terraform-context-server": {
+      "enabled": true,
+      "remote": false,
+      "settings": {}
+    }
+  },
   "git_panel": {
     "dock": "right"
   },
+  "icon_theme": "Zed (Default)",
   "language_models": {
     "ollama": {
-      "api_url": "http://127.0.0.1:11434"
+      "api_url": "http://127.0.0.1:11434",
+      "context_window": 65536
     }
   },
   "minimap": {
@@ -47,5 +58,6 @@
     "dark": "Ayu Dark",
     "light": "Ayu Light",
     "mode": "dark"
-  }
+  },
+  "ui_font_size": 16
 }
