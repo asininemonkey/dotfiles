@@ -1,6 +1,6 @@
 {
-  "defaultModel": "digitsflow/bonsai-8b",
-  "defaultProvider": "ollama",
+  "defaultModel": "prism-ml/Bonsai-27B-gguf:Q1_0",
+  "defaultProvider": "llama.cpp",
   "lastChangelogVersion": "0.80.3",
   "theme": "dark"
 }
