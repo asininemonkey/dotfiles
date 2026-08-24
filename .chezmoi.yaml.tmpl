@@ -40,9 +40,10 @@ data:
   external:
     {{ output "lscpu" "--json" }}
   llm:
-    host: {{ if contains "WSL2" .chezmoi.kernel.osrelease -}}jose-desktop-windows{{- else -}}127.0.0.1{{- end }}
-    model: prism-ml/Bonsai-27B-gguf:Q1_0
-    port: 9931
+    server:
+      hostname: {{ if contains "WSL2" .chezmoi.kernel.osrelease -}}jose-desktop-windows{{- else -}}127.0.0.1{{- end }}
+      model: prism-ml/Bonsai-27B-gguf:Q1_0
+      port: 9931
 
 edit:
   {{- if not (contains "WSL2" .chezmoi.kernel.osrelease) }}

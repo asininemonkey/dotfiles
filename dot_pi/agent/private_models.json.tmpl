@@ -3,13 +3,10 @@
     "llama.cpp": {
       "api": "openai-completions",
       "apiKey": "llama.cpp",
-      "baseUrl": "http://{{ .llm.host }}:{{ .llm.port }}/v1",
+      "baseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}/v1",
       "models": [
         {
-          "id": "{{ .llm.model }}"
-        },
-        {
-          "id": "unsloth/Qwen3.8-27B-GGUF:Q4_K_M"
+          "id": "{{ .llm.server.model }}"
         }
       ]
     }

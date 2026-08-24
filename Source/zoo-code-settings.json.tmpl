@@ -14,8 +14,8 @@
                 "apiProvider": "openai",
                 "id": "llama-cpp",
                 "openAiApiKey": "llama.cpp",
-                "openAiBaseUrl": "http://{{ .llm.host }}:{{ .llm.port }}",
-                "openAiModelId": "{{ .llm.model }}"
+                "openAiBaseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}",
+                "openAiModelId": "{{ .llm.server.model }}"
             }
         },
         "currentApiConfigName": "llama.cpp",

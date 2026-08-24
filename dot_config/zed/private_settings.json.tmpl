@@ -4,7 +4,7 @@
     "default_model": {
       "enable_thinking": true,
       "provider": "llama.cpp",
-      "model": "{{ .llm.model }}"
+      "model": "{{ .llm.server.model }}"
     }
   },
   "auto_install_extensions": {
@@ -37,7 +37,7 @@
   "icon_theme": "Zed (Default)",
   "language_models": {
     "llama.cpp": {
-      "api_url": "http://{{ .llm.host }}:{{ .llm.port }}"
+      "api_url": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}"
     }
   },
   "minimap": {
