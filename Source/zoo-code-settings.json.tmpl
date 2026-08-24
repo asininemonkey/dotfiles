@@ -1,0 +1,30 @@
+{
+    "globalSettings": {
+        "allowedCommands": [
+            "git diff",
+            "git log",
+            "git show"
+        ],
+        "deniedCommands": [],
+        "destructiveCommandGuardEnabled": true
+    },
+    "providerProfiles": {
+        "apiConfigs": {
+            "llama.cpp": {
+                "apiProvider": "openai",
+                "id": "llama-cpp",
+                "openAiApiKey": "llama.cpp",
+                "openAiBaseUrl": "http://{{ .llm.host }}:{{ .llm.port }}",
+                "openAiModelId": "{{ .llm.model }}"
+            }
+        },
+        "currentApiConfigName": "llama.cpp",
+        "modeApiConfigs": {
+            "architect": "llama-cpp",
+            "ask": "llama-cpp",
+            "code": "llama-cpp",
+            "debug": "llama-cpp",
+            "orchestrator": "llama-cpp"
+        }
+    }
+}

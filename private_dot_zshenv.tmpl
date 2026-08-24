@@ -14,5 +14,5 @@ export TALOSCONFIG="${HOME}/.config/talos/config"
 {{- if and (contains "WSL2" .chezmoi.kernel.osrelease) (eq .chezmoi.osRelease.id "arch") }}
 export GALLIUM_DRIVER=d3d12
 export LIBVA_DRIVER_NAME=d3d12
-export LLAMA_BASE_URL={{ if contains "WSL2" .chezmoi.kernel.osrelease -}}http://jose-desktop-windows:9931{{- else -}}http://127.0.0.1:9931{{- end }}
+export LLAMA_BASE_URL=http://{{ .llm.host }}:{{ .llm.port }}
 {{- end }}

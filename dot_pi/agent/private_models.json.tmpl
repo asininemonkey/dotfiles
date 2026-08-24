@@ -3,10 +3,10 @@
     "llama.cpp": {
       "api": "openai-completions",
       "apiKey": "llama.cpp",
-      "baseUrl": "{{ if contains "WSL2" .chezmoi.kernel.osrelease -}}http://jose-desktop-windows:9931{{- else -}}http://127.0.0.1:9931{{- end }}/v1",
+      "baseUrl": "http://{{ .llm.host }}:{{ .llm.port }}/v1",
       "models": [
         {
-          "id": "prism-ml/Bonsai-27B-gguf:Q1_0"
+          "id": "{{ .llm.model }}"
         },
         {
           "id": "unsloth/Qwen3.8-27B-GGUF:Q4_K_M"

@@ -4,7 +4,7 @@
     "default_model": {
       "enable_thinking": true,
       "provider": "llama.cpp",
-      "model": "prism-ml/Bonsai-27B-gguf:Q1_0"
+      "model": "{{ .llm.model }}"
     }
   },
   "auto_install_extensions": {
@@ -37,7 +37,7 @@
   "icon_theme": "Zed (Default)",
   "language_models": {
     "llama.cpp": {
-      "api_url": "{{ if contains "WSL2" .chezmoi.kernel.osrelease -}}http://jose-desktop-windows:9931{{- else -}}http://127.0.0.1:9931{{- end }}"
+      "api_url": "http://{{ .llm.host }}:{{ .llm.port }}"
     }
   },
   "minimap": {

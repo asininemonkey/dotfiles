@@ -1,5 +1,5 @@
 {
-  "defaultModel": "prism-ml/Bonsai-27B-gguf:Q1_0",
+  "defaultModel": "{{ .llm.model }}",
   "defaultProvider": "llama.cpp",
   "lastChangelogVersion": "0.80.3",
   "theme": "dark"
