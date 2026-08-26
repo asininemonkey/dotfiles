@@ -38,6 +38,7 @@ packages:
         - mesa-utils
         - noto-fonts
         - nvme-cli
+        - nvtop
         - oha
         - opentofu
         - popeye
