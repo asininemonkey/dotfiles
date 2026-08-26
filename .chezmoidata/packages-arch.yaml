@@ -107,3 +107,6 @@ packages:
     nvidia:
       extra:
         - ollama-cuda
+    wsl:
+      extra:
+        - vulkan-dzn

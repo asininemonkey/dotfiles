@@ -19,4 +19,8 @@ sudo pacman --needed --noconfirm --sync {{- range .packages.arch.nvidia.extra }}
 {{- if eq .chezmoi.hostname "asus-zenbook" }}
 sudo pacman --needed --noconfirm --sync {{- range .packages.arch.amd.extra }} {{ . }}{{ end }}
 {{- end }}
+
+{{- if contains "WSL2" .chezmoi.kernel.osrelease }}
+sudo pacman --needed --noconfirm --sync {{- range .packages.arch.wsl.extra }} {{ . }}{{ end }}
+{{- end }}
 {{ end }}
