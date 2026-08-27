@@ -1,6 +1,0 @@
-{
-  "defaultModel": "{{ .llm.server.model }}",
-  "defaultProvider": "llama.cpp",
-  "lastChangelogVersion": "0.80.3",
-  "theme": "dark"
-}

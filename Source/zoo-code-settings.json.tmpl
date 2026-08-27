@@ -8,25 +8,26 @@
         "deniedCommands": [],
         "destructiveCommandGuardEnabled": true,
         "lastSettingsExportPath": "/home/{{ .user.name.short }}/Source/zoo-code-settings.json",
+        "lastShownAnnouncementId": "aug-2026-v3.80.0-allowlists-models-reliability",
         "telemetrySetting": "disabled"
     },
     "providerProfiles": {
         "apiConfigs": {
-            "llama.cpp": {
+            "{{ .llm.provider.name }}": {
                 "apiProvider": "openai",
-                "id": "llama-cpp",
-                "openAiApiKey": "llama.cpp",
-                "openAiBaseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}",
-                "openAiModelId": "{{ .llm.server.model }}"
+                "id": "{{ .llm.provider.name }}",
+                "openAiApiKey": "{{ .llm.provider.api.key }}",
+                "openAiBaseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}{{ .llm.provider.api.path }}",
+                "openAiModelId": "{{ .llm.provider.model }}"
             }
         },
-        "currentApiConfigName": "llama.cpp",
+        "currentApiConfigName": "{{ .llm.provider.name }}",
         "modeApiConfigs": {
-            "architect": "llama-cpp",
-            "ask": "llama-cpp",
-            "code": "llama-cpp",
-            "debug": "llama-cpp",
-            "orchestrator": "llama-cpp"
+            "architect": "{{ .llm.provider.name }}",
+            "ask": "{{ .llm.provider.name }}",
+            "code": "{{ .llm.provider.name }}",
+            "debug": "{{ .llm.provider.name }}",
+            "orchestrator": "{{ .llm.provider.name }}"
         }
     }
 }

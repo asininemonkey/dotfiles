@@ -1,12 +1,12 @@
 {
   "providers": {
-    "llama.cpp": {
+    "{{ .llm.provider.name }}": {
       "api": "openai-completions",
-      "apiKey": "llama.cpp",
-      "baseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}/v1",
+      "apiKey": "{{ .llm.provider.api.key }}",
+      "baseUrl": "http://{{ .llm.server.hostname }}:{{ .llm.server.port }}{{ .llm.provider.api.path }}",
       "models": [
         {
-          "id": "{{ .llm.server.model }}"
+          "id": "{{ .llm.provider.model }}"
         }
       ]
     }
