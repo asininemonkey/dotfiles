@@ -45,7 +45,7 @@ data:
         key: sk-unsloth-62ce7b86d4e11aedc6def11ac925f767
         path: /v1
       model: unsloth/Ornith-1.0-9B-GGUF:UD-Q6_K_XL
-      name: unsloth
+      name: llama.cpp
     server:
       hostname: {{ if contains "WSL2" .chezmoi.kernel.osrelease -}}jose-desktop-windows{{- else -}}127.0.0.1{{- end }}
       port: 8888
