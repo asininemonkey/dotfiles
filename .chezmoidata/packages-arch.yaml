@@ -34,6 +34,7 @@ packages:
         - lazygit
         - libfido2
         - libiscsi
+        - llmfit
         - lynis
         - mesa-utils
         - noto-fonts
