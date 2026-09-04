@@ -11,6 +11,7 @@ packages:
         - kubelogin-bin
         - pi-bin
         - superfile
+        - taws-bin
         - terramate-bin
       gui:
         - 1password
