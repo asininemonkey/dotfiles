@@ -5,9 +5,18 @@
       "alignment": "left",
       "segments": [
         {
-          "background": "#ebcc34",
+          "background": "#1d83c2",
           "foreground": "#000000",
           "index": 5,
+          "powerline_symbol": "",
+          "style": "powerline",
+          "template": " 󰸏 {{.Profile}}{{if .Region}}@{{.Region}}{{end}} ",
+          "type": "aws"
+        },
+        {
+          "background": "#ebcc34",
+          "foreground": "#000000",
+          "index": 6,
           "powerline_symbol": "",
           "style": "powerline",
           "template": " 󱃾 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}} ",
