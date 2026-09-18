@@ -16,6 +16,7 @@ packages:
       gui:
         - 1password
         - localsend-bin
+        - koreader-bin
         - phinger-cursors
         - polymath
         - waypaper
