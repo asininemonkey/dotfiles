@@ -5,6 +5,7 @@ packages:
       common:
         - 1password-cli
         - amazon-ecr-credential-helper
+        - butane-bin
         - edk2-ovmf-fedora
         - fresh-editor-bin
         - grype-bin
