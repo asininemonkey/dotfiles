@@ -42,6 +42,12 @@ data:
 #       storage: 8Gi
 #   storageClassName: {{ .user.name.short }}
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ .user.name.short }}
+  namespace: {{ .user.name.short }}
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -100,6 +106,7 @@ spec:
               subPath: bootstrap.bash
             # - mountPath: /mnt/{{ .user.name.short }}
             #   name: {{ .user.name.short }}
+      serviceAccount: {{ .user.name.short }}
       volumes:
         - configMap:
             defaultMode: 0555
