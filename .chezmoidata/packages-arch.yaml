@@ -79,6 +79,7 @@ packages:
         - qemu-desktop
         - seahorse
         - signal-desktop
+        - virt-viewer
         - vlc
         - vlc-plugin-ffmpeg
         - vlc-plugin-x264
