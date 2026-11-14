@@ -37,7 +37,6 @@ packages:
         - llmfit
         - lynis
         - mesa-utils
-        - noto-fonts
         - nvme-cli
         - nvtop
         - oha
@@ -51,6 +50,8 @@ packages:
         - terraform
         - trippy
         - trivy
+        - ttf-iosevkaterm-nerd
+        - ttf-noto-nerd
         - unzip
         - virglrenderer
         - vulkan-tools
@@ -78,7 +79,6 @@ packages:
         - qemu-desktop
         - seahorse
         - signal-desktop
-        - ttf-iosevkaterm-nerd
         - vlc
         - vlc-plugin-ffmpeg
         - vlc-plugin-x264
@@ -86,16 +86,6 @@ packages:
         - wayland-utils
         - wl-clipboard
         - zed
-    hyprland:
-      extra:
-        - hypridle
-        - hyprland
-        - hyprlauncher
-        - hyprlock
-        - hyprpolkitagent
-        - hyprpwcenter
-        - hyprshutdown
-        - xdg-desktop-portal-hyprland
     niri:
       extra:
         - awww

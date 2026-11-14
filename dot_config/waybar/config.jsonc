@@ -93,7 +93,7 @@
   },
   "layer": "top",
   "memory": {
-    "format": "{percentage}% ",
+    "format": "{percentage}% ",
     "interval": 1,
     "on-click": "ghostty -e btop --preset 1"
   },
