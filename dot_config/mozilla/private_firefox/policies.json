@@ -71,6 +71,14 @@
       "SponsoredSuggestions": false,
       "WebSuggestions": false
     },
+    "Handlers": {
+      "mimeTypes": {
+        "application/x-virt-viewer": {
+          "action": "useSystemDefault",
+          "ask": false
+        }
+      }
+    },
     "Homepage": {
       "StartPage": "homepage",
       "URL": "https://kagi.com/"
