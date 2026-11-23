@@ -14,6 +14,7 @@ packages:
         - superfile
         - taws-bin
         - terramate-bin
+        - vm-curator-bin
       gui:
         - 1password
         - localsend-bin
